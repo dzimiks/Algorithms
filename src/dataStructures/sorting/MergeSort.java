@@ -5,22 +5,22 @@ package dataStructures.sorting;
 
 public class MergeSort {
 
-	public void merge(int[] arr, int l, int m, int r) {
+	public void merge(int[] arr, int low, int mid, int high) {
 	
-		int n1 = m - l + 1;
-		int n2 = r - m;
+		int n1 = mid - low + 1;
+		int n2 = high - mid;
 		int[] L = new int[n1];
 		int[] R = new int[n2];
 		
 		for (int i = 0; i < n1; i++)
-			L[i] = arr[l + i];
+			L[i] = arr[low + i];
 		
 		for (int i = 0; i < n2; i++)
-			R[i] = arr[m + i + 1];
+			R[i] = arr[mid + i + 1];
 		
 		int i = 0;
 		int j = 0;
-		int k = 1;
+		int k = low;
 		
 		while (i < n1 && j < n2) {
 			if (L[i] <= R[j]) 
@@ -36,12 +36,17 @@ public class MergeSort {
 			arr[k++] = R[j++];
 	}
 	
-	public void sort(int[] arr, int l, int r) {
-		if (l < r) {
-			int m = l + (r - l) / 2;
-			sort(arr, l, m);
-			sort(arr, m + 1, r);
-			merge(arr, l, m, r);
+	public void sort(int[] arr, int low, int high) {
+		if (low < high) {
+			int m = low + (high - low) / 2;
+			sort(arr, low, m);
+			sort(arr, m + 1, high);
+			merge(arr, low, m, high);
 		}
+	}
+	
+	public void print(int[] arr, int n) {
+		for (int i = 0; i < n; i++)
+			System.out.print(arr[i] + " ");
 	}
 }

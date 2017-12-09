@@ -1,6 +1,6 @@
 package dataStructures;
 
-import dataStructures.search.hashing.DoubleHashing;
+import dataStructures.searching.hashing.DoubleHashing;
 
 public class MainHashing {
 

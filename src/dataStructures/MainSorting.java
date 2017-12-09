@@ -44,9 +44,9 @@ public class MainSorting {
 //		System.out.println("\nInsertion sort:");
 //		insertionSort.sort(arr, n);
 		
-		// TODO FIX
 //		System.out.println("\nMerge sort:");
 //		mergeSort.sort(arr, 0, n - 1);
+//		mergeSort.print(arr, n);
 		
 //		System.out.println("\nQuick sort:");
 //		quickSort.sort(arr, 0, n - 1);

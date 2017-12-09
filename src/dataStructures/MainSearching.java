@@ -1,8 +1,8 @@
 package dataStructures;
 
-import dataStructures.search.BinarySearch;
+import dataStructures.searching.BinarySearch;
 
-public class MainSearch {
+public class MainSearching {
 
 	public static void main(String[] args) {
 

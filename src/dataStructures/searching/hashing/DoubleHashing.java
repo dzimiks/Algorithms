@@ -1,4 +1,4 @@
-package dataStructures.search.hashing;
+package dataStructures.searching.hashing;
 
 public class DoubleHashing implements HashTable {
 
