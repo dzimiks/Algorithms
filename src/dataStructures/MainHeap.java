@@ -38,7 +38,7 @@ public class MainHeap {
         maxHeap.print();
         System.out.println("The max val is " + maxHeap.remove());
         
-        System.out.println("\nThe Min Heap is ");
+        System.out.println("\nThe Min Heap is:");
         minHeap.print();
         System.out.println("The Min val is " + minHeap.remove());
 	}
