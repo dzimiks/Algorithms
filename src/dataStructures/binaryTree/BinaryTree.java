@@ -1,8 +1,11 @@
 package dataStructures.binaryTree;
 
 import java.util.LinkedList;
+import java.util.Map.Entry;
 import java.util.Queue;
 import java.util.Stack;
+import java.util.TreeMap;
+import java.util.Vector;
 
 public class BinaryTree<T> {
 
@@ -244,6 +247,35 @@ public class BinaryTree<T> {
 
 	public Node<T> getRoot() {
 		return root;
+	}
+	
+	public void getVerticalOrder(Node<Integer> root, int horizontalDistance, TreeMap<Integer, Vector<Integer>> m) {
+		
+		if (root == null)
+			return;
+		
+		Vector<Integer> get = m.get(horizontalDistance);
+		
+		if (get == null) {
+			get = new Vector<>();
+			get.add(root.data);
+		}
+		else 
+			get.add(root.data);
+		
+		m.put(horizontalDistance, get);
+		getVerticalOrder(root.left, horizontalDistance - 1, m);
+		getVerticalOrder(root.right, horizontalDistance + 1, m);
+	}
+	
+	public void printVerticalOrder(Node<Integer> root) {
+		
+		TreeMap<Integer, Vector<Integer>> m = new TreeMap<>();
+		int horizontalDistance = 0;
+		getVerticalOrder(root, horizontalDistance, m);
+		
+		for (Entry<Integer, Vector<Integer>> entry : m.entrySet())
+			System.out.println(entry.getValue());
 	}
 
 	public static class Node<T> {

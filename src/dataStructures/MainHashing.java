@@ -1,5 +1,8 @@
 package dataStructures;
 
+import java.util.Arrays;
+import java.util.HashSet;
+
 import dataStructures.searching.hashing.DoubleHashing;
 
 public class MainHashing {
@@ -28,6 +31,59 @@ public class MainHashing {
 		hashTable.delete(1);
 		
 		System.out.println(hashTable.search(1));
+		System.out.println();
+		
+		// Find whether an array is subset of another array
+		int[] arr1 = {11, 1, 13, 21, 3, 7};
+        int[] arr2 = {11, 3, 7, 1};
+         
+        int m = arr1.length;
+        int n = arr2.length;
+             
+        if (isSubset(arr1, arr2, m, n))
+        	System.out.println("Arr2 is a subset of Arr1.");
+        else
+        	System.out.println("Arr2 is not a subset of Arr1.");
+        
+        // Find the first repeating element in an array of integers
+        int[] arr = {10, 5, 3, 4, 3, 5, 6};
+        System.out.println();
+        printFirstRepeating(arr);
+	}
+	
+	// Time Complexity: O(n)
+	public static boolean isSubset(int[] arr1, int[] arr2, int m, int n) {
+
+		HashSet<Integer> hset = new HashSet<>();
+		
+		for (int i = 0; i < m; i++)
+			if (!hset.contains(arr1[i]))
+				hset.add(arr1[i]);
+		
+		for (int i = 0; i < n; i++)
+			if (!hset.contains(arr2[i]))
+				return false;
+		
+		return true;
+	}
+	
+	// Time Complexity: O(n)
+	public static void printFirstRepeating(int[] arr) {
+		
+		int min = -1;
+		HashSet<Integer> hset = new HashSet<>();
+		
+		for (int i = arr.length - 1; i >= 0; i--) {
+			if (hset.contains(arr[i]))
+				min = i;
+			else
+				hset.add(arr[i]);
+		}
+		
+		if (min != -1)
+            System.out.println("The first repeating element in array " + Arrays.toString(arr) + " is " + arr[min]);
+        else
+        	System.out.println("There are no repeating elements");
 	}
 	
 	private static class Person {

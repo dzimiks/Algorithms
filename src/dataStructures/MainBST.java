@@ -31,5 +31,8 @@ public class MainBST {
 		System.out.println("\nDelete 7: ");
 		tree.deleteData(7);
 		tree.inorder(tree.getRoot());
+		
+		System.out.println("\n\nBST vertical order:");
+		tree.printVerticalOrder(tree.getRoot());
 	}
 }
