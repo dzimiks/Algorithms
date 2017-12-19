@@ -1,6 +1,6 @@
 package dataStructures;
 
-import dataStructures.list.DoubleLinkedList;
+import dataStructures.lists.DoubleLinkedList;
 
 public class MainDoubleLinkedList {
 

@@ -1,6 +1,6 @@
 package dataStructures;
 
-import dataStructures.binaryTree.BinarySearchTree;
+import dataStructures.binaryTrees.BinarySearchTree;
 
 public class MainBST {
 

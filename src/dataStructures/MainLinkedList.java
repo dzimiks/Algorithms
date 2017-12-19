@@ -1,7 +1,7 @@
 package dataStructures;
 
-import dataStructures.list.LinkedList;
-import dataStructures.list.SortedLinkedList;
+import dataStructures.lists.LinkedList;
+import dataStructures.lists.SortedLinkedList;
 
 public class MainLinkedList {
 

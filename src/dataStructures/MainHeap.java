@@ -1,7 +1,7 @@
 package dataStructures;
 
-import dataStructures.heap.MaxHeap;
-import dataStructures.heap.MinHeap;
+import dataStructures.heaps.MaxHeap;
+import dataStructures.heaps.MinHeap;
 
 public class MainHeap {
 

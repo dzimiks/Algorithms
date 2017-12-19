@@ -1,7 +1,7 @@
 package dataStructures;
 
-import dataStructures.binaryTree.BinaryTree;
-import dataStructures.binaryTree.BinaryTree.Node;
+import dataStructures.binaryTrees.BinaryTree;
+import dataStructures.binaryTrees.BinaryTree.Node;
 
 public class MainBinaryTree {
 

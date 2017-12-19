@@ -1,7 +1,7 @@
 package dataStructures;
 
-import dataStructures.stack.LinkedStack;
-import dataStructures.stack.StackArray;
+import dataStructures.stacks.LinkedStack;
+import dataStructures.stacks.StackArray;
 
 public class MainStack {
 

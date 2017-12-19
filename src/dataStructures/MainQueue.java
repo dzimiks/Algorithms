@@ -1,9 +1,9 @@
 package dataStructures;
 
-import dataStructures.queue.LinkedPriorityQueue;
-import dataStructures.queue.LinkedQueue;
-import dataStructures.queue.QueueArray;
-import dataStructures.queue.QueueFromTwoStacks;
+import dataStructures.queues.LinkedPriorityQueue;
+import dataStructures.queues.LinkedQueue;
+import dataStructures.queues.QueueArray;
+import dataStructures.queues.QueueFromTwoStacks;
 
 public class MainQueue {
 

@@ -1,6 +1,6 @@
 package dataStructures;
 
-import dataStructures.queue.Deque;
+import dataStructures.queues.Deque;
 
 public class MainDeque {
 

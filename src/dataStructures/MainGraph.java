@@ -1,8 +1,8 @@
 package dataStructures;
 
-import algorithms.graphTraversal.DFS;
-import algorithms.graphTraversal.DFSPaths;
-import dataStructures.graph.Graph;
+import algorithms.graphTraversals.DFS;
+import algorithms.graphTraversals.DFSPaths;
+import dataStructures.graphs.Graph;
 
 public class MainGraph {
 

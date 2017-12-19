@@ -1,6 +1,6 @@
 package dataStructures;
 
-import dataStructures.binaryTree.AVL.AVLTree;
+import dataStructures.binaryTrees.AVL.AVLTree;
 
 public class MainAVLTree {
 
