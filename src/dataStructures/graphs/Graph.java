@@ -12,6 +12,7 @@ public class Graph {
 
 	public Graph(int V) {
 		this.V = V;
+		this.E = 0;
 		adj = new LinkedList[V];
 		
 		for (int i = 0; i < V; i++)
