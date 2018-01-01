@@ -1,6 +1,9 @@
 package dataStructures;
 
+import java.util.LinkedList;
+
 import dataStructures.graphs.AdjMatrixGraph;
+import dataStructures.graphs.ConnectedComponents;
 import dataStructures.graphs.Edge;
 import dataStructures.graphs.EdgeWeightedGraph;
 import dataStructures.graphs.Graph;
@@ -9,30 +12,11 @@ public class MainGraph {
 
 	public static void main(String[] args) {
 
-		Edge edge = new Edge(2, 3, 43);
-		Graph graph = new Graph(7);
+		In in = new In("tests/small-graph.txt");
+//		In in = new In("tests/medium-graph.txt");
+		Graph graph = new Graph(in);
 		AdjMatrixGraph adjMatrixGraph = new AdjMatrixGraph(5);
 		EdgeWeightedGraph edgeWeightedGraph = new EdgeWeightedGraph(4);
-		
-		// Edge
-		System.out.print("Edge: ");
-		System.out.println(edge);
-		System.out.println();
-		
-		// Graph
-		graph.addEdge(0, 1);
-		graph.addEdge(0, 2);
-		graph.addEdge(0, 6);
-		graph.addEdge(1, 2);
-		graph.addEdge(1, 5);
-		graph.addEdge(2, 0);
-		graph.addEdge(2, 3);
-		graph.addEdge(3, 3);
-		graph.addEdge(4, 0);
-		graph.addEdge(4, 3);
-		graph.addEdge(4, 2);
-		graph.addEdge(5, 2);
-		graph.addEdge(6, 3);
 		
 		// Adjency matrix graph
 		adjMatrixGraph.addEdge(0, 2);
@@ -44,7 +28,7 @@ public class MainGraph {
 		adjMatrixGraph.addEdge(4, 0);
 		
 		// Edge weighted graph
-		edgeWeightedGraph.addEdge(edge);
+		edgeWeightedGraph.addEdge(new Edge(0, 2, 23));
 		edgeWeightedGraph.addEdge(new Edge(1, 2, 2));
 		edgeWeightedGraph.addEdge(new Edge(3, 1, 7));
 		edgeWeightedGraph.addEdge(new Edge(2, 0, 15));
@@ -56,5 +40,26 @@ public class MainGraph {
 		System.out.println(adjMatrixGraph);
 		System.out.print("Edge weighted graph: ");
 		System.out.println(edgeWeightedGraph);
+		
+		// Connected components
+		ConnectedComponents cc = new ConnectedComponents(graph);
+		int m = cc.getCount();
+		LinkedList<Integer>[] components = new LinkedList[m];
+		
+		System.out.println("Connected components: " + m);
+		System.out.println();
+		
+		for (int i = 0; i < m; i++)
+			components[i] = new LinkedList<>();
+		
+		for (int v = 0; v < graph.getV(); v++) 
+			components[cc.getId(v)].add(v);
+		
+		for (int i = 0; i < m; i++) {
+			for (int v : components[i])
+				System.out.print(v + " ");
+			
+			System.out.println();
+		}
 	}
 }

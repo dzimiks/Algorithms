@@ -2,7 +2,10 @@ package dataStructures.graphs;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.Stack;
+
+import dataStructures.In;
 
 public class Graph {
 
@@ -33,6 +36,36 @@ public class Graph {
 				adj[v].add(w);
 		}
 	}
+	
+	public Graph(In in) {
+        try {
+            this.V = in.readInt();
+            if (V < 0) 
+            	throw new IllegalArgumentException("Number of vertices in a Graph must be nonnegative");
+            
+            adj = (LinkedList<Integer>[]) new LinkedList[V];
+            
+            for (int v = 0; v < V; v++) 
+                adj[v] = new LinkedList<Integer>();
+
+            int E = in.readInt();
+            
+            if (E < 0) 
+            	throw new IllegalArgumentException("Number of edges in a Graph must be nonnegative");
+
+            for (int i = 0; i < E; i++) {
+                int v = in.readInt();
+                int w = in.readInt();
+                
+                validateVertex(v);
+                validateVertex(w);
+                addEdge(v, w); 
+            }
+        }
+        catch (NoSuchElementException e) {
+            throw new IllegalArgumentException("Invalid input format in Graph constructor", e);
+        }
+    }
 
 	private void validateVertex(int v) {
 		if (v < 0 || v >= V)
