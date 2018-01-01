@@ -80,7 +80,7 @@ public class Digraph {
 	
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
-		sb.append(V + " vertices, " + E + " edges\n");
+		sb.append(V + " vertices, " + E + " edges\n\n");
 		
 		for (int v = 0; v < V; v++) {
 			sb.append(v + ": ");
