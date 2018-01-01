@@ -3,6 +3,8 @@ package algorithms.mst;
 import java.util.ArrayList;
 import java.util.Collections;
 
+import dataStructures.graphs.Edge;
+
 public class KruskalMST {
 
 	private int nodeCount;
@@ -35,10 +37,10 @@ public class KruskalMST {
 		
 		for (int i = 1; i < graphEdges.size() && mstEdges.size() < (nodeCount - 1); i++) {
 			Edge currEdge = graphEdges.get(i);
-			int root1 = nodeSet.find(currEdge.getVertex1());
-			int root2 = nodeSet.find(currEdge.getVertex2());
-			outputMessage += "find(" + currEdge.getVertex1() + ") returns " + root1 + 
-						   ", find(" + currEdge.getVertex2() + ") returns " + root2;
+			int root1 = nodeSet.find(currEdge.getV());
+			int root2 = nodeSet.find(currEdge.getW());
+			outputMessage += "find(" + currEdge.getV() + ") returns " + root1 + 
+						   ", find(" + currEdge.getW() + ") returns " + root2;
 			
 			String unionMessage = ",\tNo union performed\n";	
 			

@@ -59,6 +59,7 @@ public class Graph {
 	
 	@Override
 	public String toString() {
+		
 		StringBuilder sb = new StringBuilder();
 		sb.append(V + " vertices, " + E + " edges\n\n");
 		

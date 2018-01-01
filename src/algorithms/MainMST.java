@@ -1,8 +1,8 @@
 package algorithms;
 
-import algorithms.mst.Edge;
 import algorithms.mst.KruskalMST;
 import algorithms.mst.PrimMST;
+import dataStructures.graphs.Edge;
 
 public class MainMST {
 
