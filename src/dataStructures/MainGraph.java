@@ -3,6 +3,7 @@ package dataStructures;
 import java.util.LinkedList;
 
 import dataStructures.graphs.AdjMatrixGraph;
+import dataStructures.graphs.Bridge;
 import dataStructures.graphs.ConnectedComponents;
 import dataStructures.graphs.Edge;
 import dataStructures.graphs.EdgeWeightedGraph;
@@ -17,6 +18,10 @@ public class MainGraph {
 		Graph graph = new Graph(in);
 		AdjMatrixGraph adjMatrixGraph = new AdjMatrixGraph(5);
 		EdgeWeightedGraph edgeWeightedGraph = new EdgeWeightedGraph(4);
+		Bridge bridge = new Bridge(graph);
+		ConnectedComponents cc = new ConnectedComponents(graph);
+		int m = cc.getCount();
+		LinkedList<Integer>[] components = new LinkedList[m];
 		
 		// Adjency matrix graph
 		adjMatrixGraph.addEdge(0, 2);
@@ -42,10 +47,6 @@ public class MainGraph {
 		System.out.println(edgeWeightedGraph);
 		
 		// Connected components
-		ConnectedComponents cc = new ConnectedComponents(graph);
-		int m = cc.getCount();
-		LinkedList<Integer>[] components = new LinkedList[m];
-		
 		System.out.println("Connected components: " + m);
 		System.out.println();
 		
@@ -61,5 +62,8 @@ public class MainGraph {
 			
 			System.out.println();
 		}
+		
+		System.out.println("\nBridge");
+		System.out.println("Edge connected components = " + bridge.components());
 	}
 }
