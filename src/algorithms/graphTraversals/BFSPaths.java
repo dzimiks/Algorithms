@@ -21,6 +21,18 @@ public class BFSPaths {
 		bfs(G, source);
 	}
 	
+	public BFSPaths(Graph G, Iterable<Integer> sources) {
+        marked = new boolean[G.getV()];
+        distTo = new int[G.getV()];
+        edgeTo = new int[G.getV()];
+        
+        for (int v = 0; v < G.getV(); v++)
+            distTo[v] = INFINITY;
+        
+        validateVertices(sources);
+        bfs(G, sources);
+    }
+	
 	private void bfs(Graph G, int source) {
 
 		LinkedList<Integer> q = new LinkedList<>();
@@ -45,6 +57,30 @@ public class BFSPaths {
 			}
  		}
 	}
+	
+	private void bfs(Graph G, Iterable<Integer> sources) {
+        
+		LinkedList<Integer> q = new LinkedList<Integer>();
+        
+		for (int s : sources) {
+            marked[s] = true;
+            distTo[s] = 0;
+            q.add(s);
+        }
+        
+        while (!q.isEmpty()) {
+            int v = q.poll();
+            
+            for (int w : G.adj(v)) {
+                if (!marked[w]) {
+                    edgeTo[w] = v;
+                    distTo[w] = distTo[v] + 1;
+                    marked[w] = true;
+                    q.add(w);
+                }
+            }
+        }
+    }
 	
 	public boolean hasPathTo(int v) {
         validateVertex(v);
@@ -77,5 +113,16 @@ public class BFSPaths {
         
         if (v < 0 || v >= V)
             throw new IllegalArgumentException("Vertex " + v + " is not between 0 and " + (V - 1));
+    }
+	
+	private void validateVertices(Iterable<Integer> vertices) {
+        if (vertices == null) 
+            throw new IllegalArgumentException("argument is null");
+        
+        int V = marked.length;
+        
+        for (int v : vertices) 
+            if (v < 0 || v >= V) 
+                throw new IllegalArgumentException("Vertex " + v + " is not between 0 and " + (V - 1));
     }
 }
