@@ -46,7 +46,7 @@ public class PrimMST {
 		}
 		
 		int minWeight = 0;
-		System.out.println("Edge   Weight");
+		System.out.println("Edges  Weight");
 		
 		for (int i = 1; i < V; i++) {
         	minWeight += graph[i][parent[i]];
