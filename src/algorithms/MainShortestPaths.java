@@ -2,6 +2,7 @@ package algorithms;
 
 import algorithms.shortestPaths.BellmanFord;
 import algorithms.shortestPaths.Dijkstra;
+import algorithms.shortestPaths.FloydWarshall;
 import dataStructures.In;
 import dataStructures.graphs.Edge;
 import dataStructures.graphs.EdgeWeightedGraph;
@@ -41,5 +42,26 @@ public class MainShortestPaths {
 //		G.addEdge(new Edge(4, 3, -3));
 	
 		bellmanFord.bellmanFord(G, 1);
+		
+		// Floyd-Warshall
+		/* 
+	           10
+	     (0)------->(3)
+	      |         /|\
+	   5  |          |
+	      |          | 1
+	     \|/         |
+	     (1)------->(2)
+	           3     
+	    */
+		System.out.println("\nFloyd-Warshall\n");
+		FloydWarshall floydWarshall = new FloydWarshall();
+		final int INF = Integer.MAX_VALUE;
+		int graphFW[][] = {{0,  5,   INF, 10},
+		                  {INF, 0,   3,   INF},
+		                  {INF, INF, 0,   1},
+		                  {INF, INF, INF, 0}};
+		
+		floydWarshall.floydWarshall(graphFW, 4);
 	}
 }
