@@ -3,6 +3,8 @@ package dataStructures.graphs;
 import java.util.LinkedList;
 import java.util.Stack;
 
+import dataStructures.In;
+
 public class EdgeWeightedGraph {
 
 	private final int V;
@@ -32,6 +34,26 @@ public class EdgeWeightedGraph {
             
             for (Edge e : reverse) 
                 adj[v].add(e);
+        }
+    }
+    
+    public EdgeWeightedGraph(In in) {
+        this(in.readInt());
+        int E = in.readInt();
+        
+        if (E < 0) 
+        	throw new IllegalArgumentException("Number of edges must be nonnegative");
+        
+        for (int i = 0; i < E; i++) {
+            int v = in.readInt();
+            int w = in.readInt();
+            
+            validateVertex(v);
+            validateVertex(w);
+            
+            int weight = in.readInt();
+            Edge e = new Edge(v, w, weight);
+            addEdge(e);
         }
     }
 

@@ -2,6 +2,7 @@ package algorithms;
 
 import algorithms.shortestPaths.BellmanFord;
 import algorithms.shortestPaths.Dijkstra;
+import dataStructures.In;
 import dataStructures.graphs.Edge;
 import dataStructures.graphs.EdgeWeightedGraph;
 
@@ -9,6 +10,7 @@ public class MainShortestPaths {
 
 	public static void main(String[] args) {
 		
+		In in = new In("tests/small-ewg.txt");
 		int[][] graph = {{0, 4, 0, 0, 0, 0, 0, 8, 0},
 			             {4, 0, 8, 0, 0, 0, 0, 11, 0},
 			             {0, 8, 0, 7, 0, 4, 0, 0, 2},
@@ -26,18 +28,18 @@ public class MainShortestPaths {
 
 		// Bellman-Ford
 		System.out.println("\nBellman-Ford\n");
-		EdgeWeightedGraph G = new EdgeWeightedGraph(5);
+		EdgeWeightedGraph G = new EdgeWeightedGraph(in);
 		BellmanFord bellmanFord = new BellmanFord();
-		
-		G.addEdge(new Edge(0, 1, -1));
-		G.addEdge(new Edge(0, 2, 4));
-		G.addEdge(new Edge(1, 2, 3));
-		G.addEdge(new Edge(1, 3, 2));
-		G.addEdge(new Edge(1, 4, 2));
-		G.addEdge(new Edge(3, 2, 5));
-		G.addEdge(new Edge(3, 1, 1));
-		G.addEdge(new Edge(4, 3, -3));
+
+//		G.addEdge(new Edge(0, 1, -1));
+//		G.addEdge(new Edge(0, 2, 4));
+//		G.addEdge(new Edge(1, 2, 3));
+//		G.addEdge(new Edge(1, 3, 2));
+//		G.addEdge(new Edge(1, 4, 2));
+//		G.addEdge(new Edge(3, 2, 5));
+//		G.addEdge(new Edge(3, 1, 1));
+//		G.addEdge(new Edge(4, 3, -3));
 	
-		bellmanFord.bellmanFord(G, 0);
+		bellmanFord.bellmanFord(G, 1);
 	}
 }
