@@ -1,5 +1,8 @@
 package algorithms.digraphTraversals;
 
+import java.util.Iterator;
+import java.util.Stack;
+
 import dataStructures.graphs.Digraph;
 
 public class DirectedDFS {
@@ -11,6 +14,7 @@ public class DirectedDFS {
 		visited = new boolean[G.getV()];
 		validateVertex(s);
 		dfs(G, s);
+//		iterativeDFS(G, s);
 	}
 	
 	public DirectedDFS(Digraph G, Iterable<Integer> sources) {
@@ -30,6 +34,37 @@ public class DirectedDFS {
 		for (int w : G.adj(v)) 
 			if (!visited[w]) 
 				dfs(G, w);
+	}
+	
+	private void iterativeDFS(Digraph G, int s) {
+		visited = new boolean[G.getV()];
+		validateVertex(s);
+
+        Iterator<Integer>[] adj = (Iterator<Integer>[]) new Iterator[G.getV()];
+
+        for (int v = 0; v < G.getV(); v++)
+            adj[v] = G.adj(v).iterator();
+
+        Stack<Integer> stack = new Stack<Integer>();
+        visited[s] = true;
+        stack.push(s);
+        System.out.print(s + " ");
+        
+        while (!stack.isEmpty()) {
+            int v = stack.peek();
+            
+            if (adj[v].hasNext()) {
+                int w = adj[v].next();
+        
+                if (!visited[w]) {
+                    visited[w] = true;
+                    stack.push(w);
+                    System.out.print(w + " ");
+                }
+            }
+            else 
+                stack.pop();
+        }
 	}
 	
 	public boolean visited(int v) {
