@@ -39,7 +39,7 @@ public class MainGraph {
 		edgeWeightedGraph.addEdge(new Edge(2, 0, 15));
 		edgeWeightedGraph.addEdge(new Edge(1, 3, 5));
 		
-		System.out.print("Graph: ");
+		System.out.print("\nGraph: ");
 		System.out.println(graph);
 		System.out.print("Adjency matrix graph: ");
 		System.out.println(adjMatrixGraph);

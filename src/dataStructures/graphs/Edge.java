@@ -7,6 +7,10 @@ public class Edge implements Comparable<Edge> {
     private final int w;
     private final int weight;
 
+    public Edge() {
+    	v = w = weight = 0;
+    }
+    
     public Edge(int v, int w, int weight) {
         if (v < 0) 
         	throw new IllegalArgumentException("Vertex index must be a nonnegative integer");

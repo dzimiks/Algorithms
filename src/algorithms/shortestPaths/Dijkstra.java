@@ -44,6 +44,6 @@ public class Dijkstra {
 		
 		System.out.println("Vertex  Distance");
 		for (int v = 0; v < V; v++) 
-			System.out.println("  " + v + " ----- " + dist[v]);
+			System.out.println("  " + v + " ------ " + dist[v]);
 	}
 }
