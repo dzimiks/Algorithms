@@ -14,7 +14,7 @@ public class MainGraphTraversals {
 
 		In in = new In("tests/small-graph.txt");
 		Graph graph = new Graph(in);
-		int source = 0;
+		int source = 2;
 		
 		// DFS
 		System.out.println(graph);

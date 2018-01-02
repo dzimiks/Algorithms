@@ -1,7 +1,6 @@
 package dataStructures.graphs;
 
 import java.util.LinkedList;
-import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Stack;
 
@@ -11,7 +10,7 @@ public class Graph {
 
 	private int V;
 	private int E;
-	private List<Integer>[] adj;
+	private LinkedList<Integer>[] adj;
 
 	public Graph(int V) {
 		this.V = V;

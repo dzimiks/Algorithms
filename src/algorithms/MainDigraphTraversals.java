@@ -1,5 +1,6 @@
 package algorithms;
 
+import algorithms.digraphTraversals.DirectedBFS;
 import algorithms.digraphTraversals.DirectedBFSPaths;
 import algorithms.digraphTraversals.DirectedDFS;
 import algorithms.digraphTraversals.DirectedDFSPaths;
@@ -47,6 +48,13 @@ public class MainDigraphTraversals {
             else 
             	System.out.printf("%d to %d:  not connected\n", s, v);
         }
+		
+		// Directed BFS
+		System.out.println("\n============");
+		System.out.println("Directed BFS");
+		System.out.println("============\n");
+		
+		DirectedBFS directedBFS = new DirectedBFS(G, s);
 		
 		// Directed BFS paths
 		System.out.println("\n==================");
