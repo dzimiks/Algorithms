@@ -1,6 +1,7 @@
 package algorithms;
 
 import algorithms.graphTraversals.AllPaths;
+import algorithms.graphTraversals.BFS;
 import algorithms.graphTraversals.BFSPaths;
 import algorithms.graphTraversals.DFS;
 import algorithms.graphTraversals.DFSPaths;
@@ -16,16 +17,12 @@ public class MainGraphTraversals {
 		int source = 0;
 		
 		// DFS
-		DFS dfs = new DFS(graph, source);
-		
 		System.out.println(graph);
 		System.out.println("===");
 		System.out.println("DFS");
 		System.out.println("===\n");
 		
-		for (int v = 0; v < graph.getV(); v++) 
-			if (dfs.isMarked(v))
-				System.out.print(v + " ");
+		DFS dfs = new DFS(graph, source);
 		
 		System.out.println("\n");
 		
@@ -57,6 +54,12 @@ public class MainGraphTraversals {
 			else 
 				System.out.format("%d to %d: not connected!\n", source, v);
 		}
+		
+		System.out.println("\n===");
+		System.out.println("BFS");
+		System.out.println("===\n");
+		
+		BFS bfs = new BFS(graph, source);
 		
 		System.out.println("\n=========");
 		System.out.println("BFS paths");

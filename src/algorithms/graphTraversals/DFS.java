@@ -7,11 +7,11 @@ import dataStructures.graphs.Graph;
 
 public class DFS {
 
-	private boolean[] marked;
+	private boolean[] visited;
 	private int count;
 	
 	public DFS(Graph G, int s) {
-		marked = new boolean[G.getV()];
+		visited = new boolean[G.getV()];
 		validateVertex(s);
 		dfs(G, s);
 //		iterativeDFS(G, s);
@@ -19,16 +19,17 @@ public class DFS {
 	
 	private void dfs(Graph G, int v) {
 		count++;
-		marked[v] = true;
+		visited[v] = true;
+		System.out.print(v + " ");
 		
 		for (int w : G.adj(v)) {
-			if (!marked[w])
+			if (!visited[w])
 				dfs(G, w);
 		}
 	}
 	
 	private void iterativeDFS(Graph G, int s) {
-        marked = new boolean[G.getV()];
+		visited = new boolean[G.getV()];
         validateVertex(s);
         Iterator<Integer>[] adj = (Iterator<Integer>[]) new Iterator[G.getV()];
         
@@ -36,7 +37,7 @@ public class DFS {
             adj[v] = G.adj(v).iterator();
 
         Stack<Integer> stack = new Stack<Integer>();
-        marked[s] = true;
+        visited[s] = true;
         stack.push(s);
 
         while (!stack.isEmpty()) {
@@ -45,8 +46,8 @@ public class DFS {
             if (adj[v].hasNext()) {
                 int w = adj[v].next();
 
-                if (!marked[w]) {
-                    marked[w] = true;
+                if (!visited[w]) {
+                	visited[w] = true;
                     stack.push(w);
                 }
             }
@@ -57,7 +58,7 @@ public class DFS {
 	
 	public boolean isMarked(int v) {
 		validateVertex(v);
-		return marked[v];
+		return visited[v];
 	}
 
 	public int getCount() {
@@ -65,7 +66,7 @@ public class DFS {
 	}
 	
 	private void validateVertex(int v) {
-		int V = marked.length;
+		int V = visited.length;
 		
 		if (v < 0 || v >= V)
 			throw new IllegalArgumentException("Vertex " + v + " is not between 0 and " + (V - 1));
