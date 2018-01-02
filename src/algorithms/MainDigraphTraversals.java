@@ -4,7 +4,7 @@ import algorithms.digraphTraversals.DirectedBFSPaths;
 import algorithms.digraphTraversals.DirectedDFS;
 import algorithms.digraphTraversals.DirectedDFSPaths;
 import dataStructures.In;
-import dataStructures.graphs.Digraph;
+import dataStructures.digraphs.Digraph;
 
 public class MainDigraphTraversals {
 

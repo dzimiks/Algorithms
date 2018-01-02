@@ -34,7 +34,7 @@ public class MinHeap {
         return false;
     }
  
-    private void swap(int fpos, int spos) {
+    public void swap(int fpos, int spos) {
         int tmp;
         tmp = Heap[fpos];
         Heap[fpos] = Heap[spos];
@@ -84,5 +84,13 @@ public class MinHeap {
         Heap[FRONT] = Heap[size--]; 
         minHeapify(FRONT);
         return popped;
+    }
+    
+    public boolean isEmpty() {
+    	return size == 0;
+    }
+    
+    public boolean contains(int i) {
+    	return Heap[i] != -1;
     }
 }

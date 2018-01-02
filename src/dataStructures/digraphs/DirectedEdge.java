@@ -1,4 +1,4 @@
-package dataStructures.graphs;
+package dataStructures.digraphs;
 
 public class DirectedEdge {
 

@@ -1,4 +1,4 @@
-package dataStructures.graphs;
+package dataStructures.digraphs;
 
 import java.util.LinkedList;
 import java.util.List;

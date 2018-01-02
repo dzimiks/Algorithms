@@ -2,7 +2,7 @@ package algorithms.digraphTraversals;
 
 import java.util.Stack;
 
-import dataStructures.graphs.Digraph;
+import dataStructures.digraphs.Digraph;
 
 public class DirectedDFSPaths {
 
