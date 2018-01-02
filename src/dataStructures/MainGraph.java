@@ -5,6 +5,7 @@ import java.util.LinkedList;
 import dataStructures.graphs.AdjMatrixGraph;
 import dataStructures.graphs.Bridge;
 import dataStructures.graphs.ConnectedComponents;
+import dataStructures.graphs.Cycle;
 import dataStructures.graphs.Edge;
 import dataStructures.graphs.EdgeWeightedGraph;
 import dataStructures.graphs.Graph;
@@ -18,8 +19,8 @@ public class MainGraph {
 		Graph graph = new Graph(in);
 		AdjMatrixGraph adjMatrixGraph = new AdjMatrixGraph(5);
 		EdgeWeightedGraph edgeWeightedGraph = new EdgeWeightedGraph(4);
-		Bridge bridge = new Bridge(graph);
 		ConnectedComponents cc = new ConnectedComponents(graph);
+		Cycle cycle = new Cycle(graph);
 		int m = cc.getCount();
 		LinkedList<Integer>[] components = new LinkedList[m];
 		
@@ -39,7 +40,7 @@ public class MainGraph {
 		edgeWeightedGraph.addEdge(new Edge(2, 0, 15));
 		edgeWeightedGraph.addEdge(new Edge(1, 3, 5));
 		
-		System.out.print("\nGraph: ");
+		System.out.print("Graph: ");
 		System.out.println(graph);
 		System.out.print("Adjency matrix graph: ");
 		System.out.println(adjMatrixGraph);
@@ -63,7 +64,20 @@ public class MainGraph {
 			System.out.println();
 		}
 		
-		System.out.println("\nBridge");
-		System.out.println("Edge connected components = " + bridge.components());
+		// Bridge
+		System.out.println("\nBridge\n");
+		Bridge bridge = new Bridge(graph);
+		System.out.println("\nEdge connected components = " + bridge.components());
+		
+		// Cycle
+		System.out.println("\nCycle");
+		
+		if (cycle.hasCycle()) {
+			for (int v : cycle.cycle())
+				System.out.print(v + " ");
+			System.out.println();
+		}
+		else 
+			System.out.println("Graph is acyclic");
 	}
 }

@@ -23,6 +23,7 @@ public class DisjointSet {
 		else {
 			if (set[root1] == set[root2])
 				set[root1]--;
+			
 			set[root2] = root1;
 		}
 	}
