@@ -16,8 +16,6 @@ public class Edge implements Comparable<Edge> {
         	throw new IllegalArgumentException("Vertex index must be a nonnegative integer");
         if (w < 0) 
         	throw new IllegalArgumentException("Vertex index must be a nonnegative integer");
-        if (Double.isNaN(weight)) 
-        	throw new IllegalArgumentException("Weight is NaN");
         
         this.v = v;
         this.w = w;
@@ -56,6 +54,6 @@ public class Edge implements Comparable<Edge> {
 
     @Override
     public String toString() {
-        return String.format("%d %d (%d)", v, w, weight);
+        return String.format("%d -> %d (%d)", v, w, weight);
     }
 }
