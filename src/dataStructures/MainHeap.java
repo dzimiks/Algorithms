@@ -4,6 +4,7 @@ import dataStructures.heaps.IndexMaxPriorityQueue;
 import dataStructures.heaps.MaxHeap;
 import dataStructures.heaps.MaxPriorityQueue;
 import dataStructures.heaps.MinHeap;
+import dataStructures.heaps.MinPriorityQueue;
 
 public class MainHeap {
 
@@ -70,5 +71,32 @@ public class MainHeap {
         
         for (int i : indexMaxPQ)
         	System.out.println(i + " " + strings[i]);
+        
+        // Min Priority Queue
+        MinPriorityQueue<Integer> minPQ = new MinPriorityQueue<>();
+        
+        minPQ.insert(5);
+        minPQ.insert(3);
+        minPQ.insert(17);
+        minPQ.insert(10);
+        minPQ.insert(84);
+        minPQ.insert(19);
+        minPQ.insert(6);
+        minPQ.insert(22);
+        minPQ.insert(9);
+        
+        System.out.println("\nMin Priority Queue\n");
+        System.out.println("Min element is: " + minPQ.delMin() + ", size of minPQ: " + minPQ.size());
+	
+        // Index Min Priority Queue
+        System.out.println("\nIndex Min Priority Queue\n");
+        String[] names = {"Vanja", "Olja", "Gohrica", "Gohran", "Ruz'ca", "Mislisa"};
+        IndexMaxPriorityQueue<String> indexMinPQ = new IndexMaxPriorityQueue<>(names.length);
+        
+        for (int i = 0; i < names.length; i++)
+        	indexMinPQ.insert(i, names[i]);
+        
+        for (int i : indexMinPQ)
+        	System.out.println(i + " " + names[i]);
 	}
 }
