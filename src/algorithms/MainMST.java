@@ -1,7 +1,12 @@
 package algorithms;
 
+import java.util.LinkedList;
+
 import algorithms.mst.KruskalMST;
 import algorithms.mst.PrimMST;
+import algorithms.mst.TarjanStronglyConnectedComponents;
+import dataStructures.In;
+import dataStructures.digraphs.Digraph;
 import dataStructures.graphs.Edge;
 
 public class MainMST {
@@ -54,5 +59,29 @@ public class MainMST {
 		kruskalMST.add(new Edge(4, 2, 7));
 		kruskalMST.add(new Edge(4, 3, 9));
 		kruskalMST.kruskalMST();
+		
+		In in = new In("tests/small-digraph.txt");
+		Digraph G = new Digraph(in);
+		TarjanStronglyConnectedComponents tarjanSCC = new TarjanStronglyConnectedComponents(G);
+		int m = tarjanSCC.getCount();
+
+		System.out.println("\nTarjan's Strongly Connected Components\n");
+		System.out.println(G);
+		System.out.println(m + " components");
+		
+		LinkedList<Integer>[] components = new LinkedList[m];
+		
+		for (int i = 0; i < m; i++)
+			components[i] = new LinkedList<>();
+		
+		for (int v = 0; v < G.getV(); v++)
+			components[tarjanSCC.id(v)].add(v);
+		
+		for (int i = 0; i < m; i++) {
+			for (int v : components[i])
+				System.out.print(v + " ");
+			
+			System.out.println();
+		}
 	}
 }

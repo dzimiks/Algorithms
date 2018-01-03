@@ -2,18 +2,18 @@ package dataStructures.graphs;
 
 public class ConnectedComponents {
 
-	private boolean[] marked;   
+	private boolean[] visited;   
     private int[] id;         
     private int[] size;       
     private int count;         
 
     public ConnectedComponents(Graph G) {
-        marked = new boolean[G.getV()];
+        visited = new boolean[G.getV()];
         id = new int[G.getV()];
         size = new int[G.getV()];
         
         for (int v = 0; v < G.getV(); v++) {
-            if (!marked[v]) {
+            if (!visited[v]) {
                 dfs(G, v);
                 count++;
             }
@@ -21,12 +21,12 @@ public class ConnectedComponents {
     }
 
     public ConnectedComponents(EdgeWeightedGraph G) {
-        marked = new boolean[G.getV()];
+        visited = new boolean[G.getV()];
         id = new int[G.getV()];
         size = new int[G.getV()];
         
         for (int v = 0; v < G.getV(); v++) {
-            if (!marked[v]) {
+            if (!visited[v]) {
                 dfs(G, v);
                 count++;
             }
@@ -34,24 +34,24 @@ public class ConnectedComponents {
     }
 
     private void dfs(Graph G, int v) {
-        marked[v] = true;
+        visited[v] = true;
         id[v] = count;
         size[count]++;
         
         for (int w : G.adj(v)) 
-            if (!marked[w]) 
+            if (!visited[w]) 
                 dfs(G, w);
     }
 
     private void dfs(EdgeWeightedGraph G, int v) {
-        marked[v] = true;
+        visited[v] = true;
         id[v] = count;
         size[count]++;
         
         for (Edge e : G.adj(v)) {
             int w = e.other(v);
             
-            if (!marked[w]) 
+            if (!visited[w]) 
                 dfs(G, w);
         }
     }
@@ -77,7 +77,7 @@ public class ConnectedComponents {
     }
 
     private void validateVertex(int v) {
-        int V = marked.length;
+        int V = visited.length;
         
         if (v < 0 || v >= V)
             throw new IllegalArgumentException("Vertex " + v + " is not between 0 and " + (V - 1));
