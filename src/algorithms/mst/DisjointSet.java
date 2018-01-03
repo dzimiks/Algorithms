@@ -35,4 +35,8 @@ public class DisjointSet {
 		
 		return set[x] = find(set[x]);
 	}
+	
+	public boolean isConnected(int p, int q) {
+		return find(p) == find(q);
+	}
 }
