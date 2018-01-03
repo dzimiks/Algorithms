@@ -26,7 +26,7 @@ public class DirectedEdge {
         return w;
     }
 
-    public double weight() {
+    public int weight() {
         return weight;
     }
 
