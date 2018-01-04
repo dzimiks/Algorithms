@@ -1,5 +1,6 @@
 package dataStructures;
 
+import dataStructures.digraphs.AdjMatrixEdgeWeightedDigraph;
 import dataStructures.digraphs.Digraph;
 import dataStructures.digraphs.DirectedEdge;
 import dataStructures.digraphs.EdgeWeightedDigraph;
@@ -8,8 +9,10 @@ public class MainDigraph {
 
 	public static void main(String[] args) {
 
-		Digraph G = new Digraph(5);
-		EdgeWeightedDigraph ewd = new EdgeWeightedDigraph(5);
+		int V = 5;
+		Digraph G = new Digraph(V);
+		EdgeWeightedDigraph ewd = new EdgeWeightedDigraph(V);
+		AdjMatrixEdgeWeightedDigraph adjMatrixEWD = new AdjMatrixEdgeWeightedDigraph(V);
 		
 		// Digraph
 		G.addEdge(0, 2);
@@ -21,7 +24,7 @@ public class MainDigraph {
 		
 		System.out.println(G);
 
-		// Edge weighted digraph
+		// Edge Weighted Digraph
 		ewd.addEdge(new DirectedEdge(0, 1, 12));
 		ewd.addEdge(new DirectedEdge(0, 2, 3));
 		ewd.addEdge(new DirectedEdge(1, 2, 4));
@@ -31,5 +34,15 @@ public class MainDigraph {
 		ewd.addEdge(new DirectedEdge(2, 0, 2));
 		
 		System.out.println(ewd);
+		
+		// Adjency Matrix Edge Weighted Digraph
+		adjMatrixEWD.addEdge(new DirectedEdge(0, 1, 2));
+		adjMatrixEWD.addEdge(new DirectedEdge(1, 2, 43));
+		adjMatrixEWD.addEdge(new DirectedEdge(3, 1, 30));
+		adjMatrixEWD.addEdge(new DirectedEdge(4, 3, 15));
+		adjMatrixEWD.addEdge(new DirectedEdge(2, 4, 4));
+		adjMatrixEWD.addEdge(new DirectedEdge(2, 3, 9));
+		
+		System.out.println(adjMatrixEWD);
 	}
 }
