@@ -3,6 +3,7 @@ package dataStructures;
 import java.util.LinkedList;
 
 import dataStructures.graphs.AdjMatrixGraph;
+import dataStructures.graphs.Biconnected;
 import dataStructures.graphs.Bridge;
 import dataStructures.graphs.ConnectedComponents;
 import dataStructures.graphs.Cycle;
@@ -16,11 +17,11 @@ public class MainGraph {
 
 		In in = new In("tests/small-graph.txt");
 //		In in = new In("tests/medium-graph.txt");
-		Graph graph = new Graph(in);
+		Graph G = new Graph(in);
 		AdjMatrixGraph adjMatrixGraph = new AdjMatrixGraph(5);
 		EdgeWeightedGraph edgeWeightedGraph = new EdgeWeightedGraph(4);
-		ConnectedComponents cc = new ConnectedComponents(graph);
-		Cycle cycle = new Cycle(graph);
+		ConnectedComponents cc = new ConnectedComponents(G);
+		Cycle cycle = new Cycle(G);
 		int m = cc.getCount();
 		LinkedList<Integer>[] components = new LinkedList[m];
 		
@@ -41,7 +42,7 @@ public class MainGraph {
 		edgeWeightedGraph.addEdge(new Edge(1, 3, 5));
 		
 		System.out.print("Graph: ");
-		System.out.println(graph);
+		System.out.println(G);
 		System.out.print("Adjency matrix graph: ");
 		System.out.println(adjMatrixGraph);
 		System.out.print("Edge weighted graph: ");
@@ -54,7 +55,7 @@ public class MainGraph {
 		for (int i = 0; i < m; i++)
 			components[i] = new LinkedList<>();
 		
-		for (int v = 0; v < graph.getV(); v++) 
+		for (int v = 0; v < G.getV(); v++) 
 			components[cc.getId(v)].add(v);
 		
 		for (int i = 0; i < m; i++) {
@@ -66,7 +67,7 @@ public class MainGraph {
 		
 		// Bridge
 		System.out.println("\nBridge\n");
-		Bridge bridge = new Bridge(graph);
+		Bridge bridge = new Bridge(G);
 		System.out.println("\nEdge connected components = " + bridge.components());
 		
 		// Cycle
@@ -79,5 +80,13 @@ public class MainGraph {
 		}
 		else 
 			System.out.println("Graph is acyclic");
+		
+		// Articulation points in graph
+		Biconnected bic = new Biconnected(G);
+		System.out.println("\nArticulation points\n");
+		
+		for (int v = 0; v < G.getV(); v++)
+			if (bic.isArticulation(v))
+				System.out.println(v); 
 	}
 }
