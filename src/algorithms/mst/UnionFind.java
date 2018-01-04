@@ -2,13 +2,13 @@ package algorithms.mst;
 
 import dataStructures.In;
 
-public class UF {
+public class UnionFind {
 
 	public static void main(String[] args) {
 		
 		In in = new In("tests/medium-uf.txt");
 		int n = in.readInt();
-		UF uf = new UF(n);
+		UnionFind uf = new UnionFind(n);
 		
 		while (!in.isEmpty()) {
 			int p = in.readInt();
@@ -28,7 +28,7 @@ public class UF {
     private byte[] rank;  
     private int count;    
 
-    public UF(int n) {
+    public UnionFind(int n) {
         if (n < 0) 
         	throw new IllegalArgumentException();
         

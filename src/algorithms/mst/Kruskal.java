@@ -32,7 +32,7 @@ public class Kruskal {
             pq.insert(e);
         }
 
-        UF uf = new UF(G.getV());
+        UnionFind uf = new UnionFind(G.getV());
         
         while (!pq.isEmpty() && mst.size() < G.getV() - 1) {
             Edge e = pq.delMin();
