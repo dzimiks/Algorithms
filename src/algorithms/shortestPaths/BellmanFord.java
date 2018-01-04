@@ -42,7 +42,7 @@ public class BellmanFord {
             
             if (dist[u] != Integer.MAX_VALUE &&
                 dist[u] + weight < dist[v])
-              System.out.println("Graph contains negative weight cycle");
+            	System.out.println("Graph contains negative weight cycle");
         }
         
         System.out.println("Vertex   Distance from Source");
