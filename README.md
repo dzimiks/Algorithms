@@ -3,6 +3,7 @@
 My implementation of various algorithms and data structures written in Java.
 
 * [Data Structures](#data-structures)
+* [Tests](#tests)
 
 # Data Structures
 
@@ -24,3 +25,15 @@ My implementation of various algorithms and data structures written in Java.
 | Graphs | [Edge.java](https://github.com/dzimiks/Algorithms/blob/master/src/dataStructures/graphs/Edge.java) | [MainGraph.java](https://github.com/dzimiks/Algorithms/blob/master/src/dataStructures/MainGraph.java#L37-L42) |
 | Graphs | [EdgeWeightedGraph.java](https://github.com/dzimiks/Algorithms/blob/master/src/dataStructures/graphs/EdgeWeightedGraph.java) | [MainGraph.java](https://github.com/dzimiks/Algorithms/blob/master/src/dataStructures/MainGraph.java#L37-L42) |
 | Graphs | [Graph.java](https://github.com/dzimiks/Algorithms/blob/master/src/dataStructures/graphs/Graph.java) | [MainGraph.java](https://github.com/dzimiks/Algorithms/blob/master/src/dataStructures/MainGraph.java#L18-L20) |
+
+# Tests
+
+| File | Description |                                                                                           
+|:----:|:-----------:|
+| [small-graph.txt](https://github.com/dzimiks/Algorithms/blob/master/src/tests/small-graph.txt) | Small size input for Graph |
+| [medium-graph.txt](https://github.com/dzimiks/Algorithms/blob/master/src/tests/medium-graph.txt) | Medium size input for Graph |
+| [small-ewg.txt](https://github.com/dzimiks/Algorithms/blob/master/src/tests/small-ewg.txt) | Small size input for Edge Weighted Graph |
+| [small-digraph.txt](https://github.com/dzimiks/Algorithms/blob/master/src/tests/small-digraph.txt) | Small size input for Digraph |
+| [small-ewd.txt](https://github.com/dzimiks/Algorithms/blob/master/src/tests/small-ewd.txt) | Small size input for Edge Weighted Digraph |
+| [small-uf.txt](https://github.com/dzimiks/Algorithms/blob/master/src/tests/small-uf.txt) | Small size input for Union Find (Disjoint Sets) |
+| [medium-uf.txt](https://github.com/dzimiks/Algorithms/blob/master/src/tests/medium-uf.txt) | Medium size input for Union Find (Disjoint Sets) |
