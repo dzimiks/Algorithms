@@ -1,6 +1,7 @@
 package dataStructures;
 
 import dataStructures.heaps.IndexMaxPriorityQueue;
+import dataStructures.heaps.IndexMinPriorityQueue;
 import dataStructures.heaps.MaxHeap;
 import dataStructures.heaps.MaxPriorityQueue;
 import dataStructures.heaps.MinHeap;
@@ -91,7 +92,7 @@ public class MainHeap {
         // Index Min Priority Queue
         System.out.println("\nIndex Min Priority Queue\n");
         String[] names = {"Vanja", "Olja", "Gohrica", "Gohran", "Ruz'ca", "Mislisa"};
-        IndexMaxPriorityQueue<String> indexMinPQ = new IndexMaxPriorityQueue<>(names.length);
+        IndexMinPriorityQueue<String> indexMinPQ = new IndexMinPriorityQueue<>(names.length);
         
         for (int i = 0; i < names.length; i++)
         	indexMinPQ.insert(i, names[i]);
