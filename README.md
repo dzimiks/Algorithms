@@ -25,6 +25,12 @@ My implementation of various algorithms and data structures written in Java.
 | Graphs | [Edge.java](https://github.com/dzimiks/Algorithms/blob/master/src/dataStructures/graphs/Edge.java) | [MainGraph.java](https://github.com/dzimiks/Algorithms/blob/master/src/dataStructures/MainGraph.java#L37-L42) |
 | Graphs | [EdgeWeightedGraph.java](https://github.com/dzimiks/Algorithms/blob/master/src/dataStructures/graphs/EdgeWeightedGraph.java) | [MainGraph.java](https://github.com/dzimiks/Algorithms/blob/master/src/dataStructures/MainGraph.java#L37-L42) |
 | Graphs | [Graph.java](https://github.com/dzimiks/Algorithms/blob/master/src/dataStructures/graphs/Graph.java) | [MainGraph.java](https://github.com/dzimiks/Algorithms/blob/master/src/dataStructures/MainGraph.java#L18-L20) |
+| Heaps | [IndexMaxPriorityQueue.java](https://github.com/dzimiks/Algorithms/blob/master/src/dataStructures/heaps/IndexMaxPriorityQueue.java) | [MainHeap.java](https://github.com/dzimiks/Algorithms/blob/master/src/dataStructures/MainHeap.java#L65-L74) |
+| Heaps | [IndexMinPriorityQueue.java](https://github.com/dzimiks/Algorithms/blob/master/src/dataStructures/heaps/IndexMinPriorityQueue.java) | [MainHeap.java](https://github.com/dzimiks/Algorithms/blob/master/src/dataStructures/MainHeap.java#L92-L101) |
+| Heaps | [MaxHeap.java](https://github.com/dzimiks/Algorithms/blob/master/src/dataStructures/heaps/MaxHeap.java) | [MainHeap.java](https://github.com/dzimiks/Algorithms/blob/master/src/dataStructures/MainHeap.java#L17-L27) |
+| Heaps | [MaxPriorityQueue.java](https://github.com/dzimiks/Algorithms/blob/master/src/dataStructures/heaps/MaxPriorityQueue.java) | [MainHeap.java](https://github.com/dzimiks/Algorithms/blob/master/src/dataStructures/MainHeap.java#L49-L63) |
+| Heaps | [MinHeap.java](https://github.com/dzimiks/Algorithms/blob/master/src/dataStructures/heaps/MinHeap.java) | [MainHeap.java](https://github.com/dzimiks/Algorithms/blob/master/src/dataStructures/MainHeap.java#L29-L39) |
+| Heaps | [MinPriorityQueue.java](https://github.com/dzimiks/Algorithms/blob/master/src/dataStructures/heaps/MinPriorityQueue.java) | [MainHeap.java](https://github.com/dzimiks/Algorithms/blob/master/src/dataStructures/MainHeap.java#L76-L90) |
 
 # Tests
 
