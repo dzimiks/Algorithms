@@ -2,6 +2,7 @@ package dataStructures;
 
 import dataStructures.digraphs.AdjMatrixEdgeWeightedDigraph;
 import dataStructures.digraphs.Digraph;
+import dataStructures.digraphs.DirectedCycle;
 import dataStructures.digraphs.DirectedEdge;
 import dataStructures.digraphs.EdgeWeightedDigraph;
 
@@ -10,17 +11,19 @@ public class MainDigraph {
 	public static void main(String[] args) {
 
 		int V = 5;
-		Digraph G = new Digraph(V);
+		In in = new In("tests/small-digraph.txt");
+		Digraph G = new Digraph(in);
 		EdgeWeightedDigraph ewd = new EdgeWeightedDigraph(V);
 		AdjMatrixEdgeWeightedDigraph adjMatrixEWD = new AdjMatrixEdgeWeightedDigraph(V);
+		DirectedCycle cycle = new DirectedCycle(G);
 		
 		// Digraph
-		G.addEdge(0, 2);
-		G.addEdge(0, 4);
-		G.addEdge(1, 2);
-		G.addEdge(2, 1);
-		G.addEdge(3, 3);
-		G.addEdge(4, 2);
+//		G.addEdge(0, 2);
+//		G.addEdge(0, 4);
+//		G.addEdge(1, 2);
+//		G.addEdge(2, 1);
+//		G.addEdge(3, 3);
+//		G.addEdge(4, 2);
 		
 		System.out.println(G);
 
@@ -44,5 +47,17 @@ public class MainDigraph {
 		adjMatrixEWD.addEdge(new DirectedEdge(2, 3, 9));
 		
 		System.out.println(adjMatrixEWD);
+		
+		// Cycle
+		if (cycle.hasCycle()) {
+			System.out.print("Directed cycle: ");
+			
+			for (int v : cycle.cycle())
+				System.out.print(v + " ");
+			
+			System.out.println();
+		}
+		else 
+			System.out.println("No directed cycle");
 	}
 }

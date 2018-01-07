@@ -5,6 +5,7 @@ import algorithms.graphTraversals.BFS;
 import algorithms.graphTraversals.BFSPaths;
 import algorithms.graphTraversals.DFS;
 import algorithms.graphTraversals.DFSPaths;
+import algorithms.graphTraversals.TopologicalSort;
 import dataStructures.In;
 import dataStructures.graphs.Graph;
 
@@ -15,10 +16,19 @@ public class MainGraphTraversals {
 		In in = new In("tests/small-graph.txt");
 		Graph graph = new Graph(in);
 		int source = 2;
+
+		System.out.println(graph);
+		
+		// Topological Sort
+		System.out.println("================");
+		System.out.println("Topological Sort");
+		System.out.println("================\n");
+		
+		TopologicalSort topologicalSort = new TopologicalSort(graph);
+		topologicalSort.topologicalSort();
 		
 		// DFS
-		System.out.println(graph);
-		System.out.println("===");
+		System.out.println("\n===");
 		System.out.println("DFS");
 		System.out.println("===\n");
 		

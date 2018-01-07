@@ -1,5 +1,6 @@
 package algorithms;
 
+import algorithms.digraphTraversals.DepthFirstOrder;
 import algorithms.digraphTraversals.DirectedBFS;
 import algorithms.digraphTraversals.DirectedBFSPaths;
 import algorithms.digraphTraversals.DirectedDFS;
@@ -16,7 +17,7 @@ public class MainDigraphTraversals {
 		int s = 7;
 
 		System.out.println(G);
-	
+		
 		// Directed DFS
 		System.out.println("============");
 		System.out.println("Directed DFS");
@@ -79,5 +80,36 @@ public class MainDigraphTraversals {
 			else 
 				System.out.format("%d to %d: not connected!\n", s, v);
 		}
+		
+		// Depth First Order
+		System.out.println("\n=================");
+		System.out.println("Depth First Order");
+		System.out.println("=================");
+		
+		DepthFirstOrder dfs = new DepthFirstOrder(G);
+		
+		System.out.println(" v pre post\n");
+		
+		for (int v = 0; v < G.getV(); v++)
+			System.out.printf("%2d  %2d  %2d\n", v, dfs.pre(v), dfs.post(v));
+		
+		System.out.print("\nPreorder: ");
+		
+        for (int v : dfs.pre()) 
+        	System.out.print(v + " ");
+        
+        System.out.println();
+
+        System.out.print("Postorder: ");
+        
+        for (int v : dfs.post()) 
+        	System.out.print(v + " ");
+
+        System.out.println();
+
+        System.out.print("Reverse postorder: ");
+
+        for (int v : dfs.reversePost()) 
+        	System.out.print(v + " ");
 	}
 }
