@@ -32,31 +32,32 @@ public class MainSorting {
 		System.out.println("Counting sort:");
 		countingSort.sort(arr, n);
 		
-//		System.out.println("\nRadix sort:");
-//		radixSort.sort(arr, n);
+		System.out.println("\nRadix sort:");
+		radixSort.sort(arr, n);
+//		radixSort.radixSort(arr, 3);
 		
-//		System.out.println("\nSelection sort:");
-//		selectionSort.sort(arr, n);
+		System.out.println("\nSelection sort:");
+		selectionSort.sort(arr, n);
 		
-//		System.out.println("\nBubble sort:");
-//		bubbleSort.sort(arr, n);
+		System.out.println("\nBubble sort:");
+		bubbleSort.sort(arr, n);
 		
-//		System.out.println("\nInsertion sort:");
-//		insertionSort.sort(arr, n);
+		System.out.println("\nInsertion sort:");
+		insertionSort.sort(arr, n);
 		
-//		System.out.println("\nMerge sort:");
-//		mergeSort.sort(arr, 0, n - 1);
-//		mergeSort.print(arr, n);
+		System.out.println("\nMerge sort:");
+		mergeSort.sort(arr, 0, n - 1);
+		mergeSort.print(arr, n);
 		
-//		System.out.println("\nQuick sort:");
-//		quickSort.sort(arr, 0, n - 1);
-//		quickSort.print(arr, n);
+		System.out.println("\nQuick sort:");
+		quickSort.sort(arr, 0, n - 1);
+		quickSort.print(arr, n);
 		
-//		System.out.println("\nHeap sort:");
-//		heapSort.sort(arr, n);
-//		heapSort.print(arr, n);
+		System.out.println("\nHeap sort:");
+		heapSort.sort(arr, n);
+		heapSort.print(arr, n);
 		
-//		System.out.println("\nShell sort:");
-//		shellSort.sort(arr, n);
+		System.out.println("\nShell sort:");
+		shellSort.sort(arr, n);
 	}
 }

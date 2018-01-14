@@ -1,6 +1,7 @@
 package algorithms.sorting;
 
 import java.util.Arrays;
+import java.util.LinkedList;
 
 // Let there be d digits in input integers. 
 // Radix Sort takes O(d * (n + b)) time where b is the base for representing numbers, 
@@ -47,6 +48,39 @@ public class RadixSort {
 		
 		for (int exp = 1; m / exp > 0; exp *= 10) 
 			countingSort(arr, n, exp);
+		
+		for (int i = 0; i < n; i++)
+			System.out.print(arr[i] + " ");
+		System.out.println();
+	}
+	
+	public void radixSort(int[] arr, int k) {
+		
+		int n = arr.length;
+		
+		if (arr == null || n == 0 || k < 1)
+			return;
+		
+		LinkedList<Integer>[] lists = new LinkedList[10]; 
+		
+		for (int i = 0; i < 10; i++)
+			lists[i] = new LinkedList<>();
+		
+		for (int i = 0; i < k; i++) {
+			for (int j = 0; j < n; j++) {
+				int index = arr[j] / ((int) Math.pow(10, i)) % 10;
+				lists[index].add(arr[j]);
+			}
+			
+			int index = 0;
+			
+			for (LinkedList<Integer> list : lists) {
+				while (!list.isEmpty()) {
+					arr[index++] = list.getFirst().intValue();
+					list.removeFirst();
+				}
+			}
+		}
 		
 		for (int i = 0; i < n; i++)
 			System.out.print(arr[i] + " ");
