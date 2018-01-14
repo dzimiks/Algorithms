@@ -31,6 +31,9 @@ My implementation of various algorithms and data structures written in Java.
 | Heaps | [MaxPriorityQueue.java](https://github.com/dzimiks/Algorithms/blob/master/src/dataStructures/heaps/MaxPriorityQueue.java) | [MainHeap.java](https://github.com/dzimiks/Algorithms/blob/master/src/dataStructures/MainHeap.java#L49-L63) |
 | Heaps | [MinHeap.java](https://github.com/dzimiks/Algorithms/blob/master/src/dataStructures/heaps/MinHeap.java) | [MainHeap.java](https://github.com/dzimiks/Algorithms/blob/master/src/dataStructures/MainHeap.java#L29-L39) |
 | Heaps | [MinPriorityQueue.java](https://github.com/dzimiks/Algorithms/blob/master/src/dataStructures/heaps/MinPriorityQueue.java) | [MainHeap.java](https://github.com/dzimiks/Algorithms/blob/master/src/dataStructures/MainHeap.java#L76-L90) |
+| Lists | [DoubleLinkedList.java](https://github.com/dzimiks/Algorithms/blob/master/src/dataStructures/lists/DoubleLinkedList.java) | [MainDoubleLinkedList.java](https://github.com/dzimiks/Algorithms/blob/master/src/dataStructures/MainDoubleLinkedList.java) |
+| Lists | [LinkedList.java](https://github.com/dzimiks/Algorithms/blob/master/src/dataStructures/lists/LinkedList.java) | [MainLinkedList.java](https://github.com/dzimiks/Algorithms/blob/master/src/dataStructures/MainLinkedList.java) |
+| Lists | [SortedLinkedList.java](https://github.com/dzimiks/Algorithms/blob/master/src/dataStructures/lists/SortedLinkedList.java) | [MainLinkedList.java](https://github.com/dzimiks/Algorithms/blob/master/src/dataStructures/MainLinkedList.java) |
 
 # Tests
 
