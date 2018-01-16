@@ -47,7 +47,7 @@ public class AdjMatrixGraph {
         private int v;
         private int w = 0;
 
-        AdjIterator(int v) {
+        public AdjIterator(int v) {
             this.v = v;
         }
 
@@ -56,9 +56,10 @@ public class AdjMatrixGraph {
         }
 
         public boolean hasNext() {
-        	
             while (w < V) {
-                if (adj[v][w]) return true;
+                if (adj[v][w]) 
+                	return true;
+
                 w++;
             }
             
@@ -66,9 +67,8 @@ public class AdjMatrixGraph {
         }
 
         public Integer next() {
-            if (!hasNext()) {
+            if (!hasNext()) 
                 throw new NoSuchElementException();
-            }
             
             return w++;
         }
@@ -77,7 +77,6 @@ public class AdjMatrixGraph {
             throw new UnsupportedOperationException();
         }
     }
-
 
     public String toString() {
     	

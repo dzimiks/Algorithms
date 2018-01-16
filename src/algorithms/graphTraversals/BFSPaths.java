@@ -117,7 +117,7 @@ public class BFSPaths {
 	
 	private void validateVertices(Iterable<Integer> vertices) {
         if (vertices == null) 
-            throw new IllegalArgumentException("argument is null");
+            throw new IllegalArgumentException("Argument is null");
         
         int V = visited.length;
         

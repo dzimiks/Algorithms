@@ -29,6 +29,7 @@ public class EdgeWeightedGraph {
 
         for (int v = 0; v < G.getV(); v++) {
             Stack<Edge> reverse = new Stack<Edge>();
+            
             for (Edge e : G.adj[v]) 
                 reverse.push(e);
             
@@ -76,6 +77,7 @@ public class EdgeWeightedGraph {
         
         validateVertex(v);
         validateVertex(w);
+        
         adj[v].add(e);
         adj[w].add(e);
         E++;

@@ -49,7 +49,7 @@ public class Edge implements Comparable<Edge> {
 
     @Override
     public int compareTo(Edge edge) {
-        return Double.compare(this.weight, edge.weight);
+        return Integer.compare(this.weight, edge.weight);
     }
 
     @Override
