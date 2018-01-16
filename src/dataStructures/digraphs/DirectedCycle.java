@@ -10,9 +10,9 @@ public class DirectedCycle {
     private Stack<Integer> cycle;    
 
     public DirectedCycle(Digraph G) {
-        visited  = new boolean[G.getV()];
+        visited = new boolean[G.getV()];
         onStack = new boolean[G.getV()];
-        edgeTo  = new int[G.getV()];
+        edgeTo = new int[G.getV()];
         
         for (int v = 0; v < G.getV(); v++)
             if (!visited[v] && cycle == null)

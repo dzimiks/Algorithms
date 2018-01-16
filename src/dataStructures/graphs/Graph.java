@@ -68,7 +68,7 @@ public class Graph {
 
 	private void validateVertex(int v) {
 		if (v < 0 || v >= V)
-			throw new IllegalArgumentException("Vertex " + v + " is not betweeen 0 and " + (V - 1));
+			throw new IllegalArgumentException("Vertex " + v + " is not between 0 and " + (V - 1));
 	}
 	
 	public void addEdge(int v, int w) {
