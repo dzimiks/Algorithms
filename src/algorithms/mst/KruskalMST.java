@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 import dataStructures.graphs.Edge;
+import dataStructures.graphs.EdgeWeightedGraph;
 
 public class KruskalMST {
 
@@ -11,8 +12,16 @@ public class KruskalMST {
 	private ArrayList<Edge> graphEdges;
 	
 	public KruskalMST() {
-		graphEdges = new ArrayList<Edge>();
 		nodeCount = 0;
+		graphEdges = new ArrayList<>();
+	}
+	
+	public KruskalMST(EdgeWeightedGraph G) {
+		nodeCount = G.getV();
+		graphEdges = new ArrayList<>();
+		
+		for (Edge edge : G.edges()) 
+			graphEdges.add(new Edge(edge.getV(), edge.getW(), edge.getWeight()));
 	}
 
 	public void add(Edge edge) {
