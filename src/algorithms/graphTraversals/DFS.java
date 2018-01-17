@@ -56,7 +56,7 @@ public class DFS {
         }
     }
 	
-	public boolean isMarked(int v) {
+	public boolean isVisited(int v) {
 		validateVertex(v);
 		return visited[v];
 	}

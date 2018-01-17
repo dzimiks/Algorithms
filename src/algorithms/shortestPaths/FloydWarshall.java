@@ -26,7 +26,7 @@ public class FloydWarshall {
 				if (dist[i][j] == Integer.MAX_VALUE)
 					System.out.print("INF ");
 				else
-		            System.out.print(dist[i][j] + "   ");
+					System.out.printf("%3d ", dist[i][j]);
 		   }
 		   
 		   System.out.println();
