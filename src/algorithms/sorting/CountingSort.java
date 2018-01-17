@@ -5,19 +5,20 @@ package algorithms.sorting;
 
 public class CountingSort {
 
-	public void sort(int[] arr, int n) {
+	public void sort(int[] arr, int k) {
 		
+		int n = arr.length;
 		int[] output = new int[n];
-		int[] count = new int[1000000];
+		int[] count = new int[k];
 		
-		for (int i = 0; i < 1000000; i++)
+		for (int i = 0; i < k; i++)
 			count[i] = 0;
 		
 		for (int i = 0; i < n; i++)
 			count[arr[i]]++;
 		
-		for (int i = 1; i < 1000000; i++)
-			count[i] += count[i-1];
+		for (int i = 1; i < k; i++)
+			count[i] += count[i - 1];
 	
 		for (int i = 0; i < n; i++) {
 			output[count[arr[i]] - 1] = arr[i];

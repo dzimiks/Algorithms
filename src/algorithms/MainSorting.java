@@ -30,7 +30,7 @@ public class MainSorting {
 		
 		// Examples
 		System.out.println("Counting sort:");
-		countingSort.sort(arr, n);
+		countingSort.sort(arr, 522);
 		
 		System.out.println("\nRadix sort:");
 		radixSort.sort(arr, n);
