@@ -1,6 +1,6 @@
 # Algorithms and Data Structures
 
-My implementation of various algorithms and data structures written in Java.
+Implementation of various algorithms and data structures written in Java.
 
 * [Data Structures](#data-structures)
 * [Tests](#tests)
@@ -34,6 +34,13 @@ My implementation of various algorithms and data structures written in Java.
 | Lists | [DoubleLinkedList.java](https://github.com/dzimiks/Algorithms/blob/master/src/dataStructures/lists/DoubleLinkedList.java) | [MainDoubleLinkedList.java](https://github.com/dzimiks/Algorithms/blob/master/src/dataStructures/MainDoubleLinkedList.java) |
 | Lists | [LinkedList.java](https://github.com/dzimiks/Algorithms/blob/master/src/dataStructures/lists/LinkedList.java) | [MainLinkedList.java](https://github.com/dzimiks/Algorithms/blob/master/src/dataStructures/MainLinkedList.java) |
 | Lists | [SortedLinkedList.java](https://github.com/dzimiks/Algorithms/blob/master/src/dataStructures/lists/SortedLinkedList.java) | [MainLinkedList.java](https://github.com/dzimiks/Algorithms/blob/master/src/dataStructures/MainLinkedList.java) |
+| Queues | [Deque.java](https://github.com/dzimiks/Algorithms/blob/master/src/dataStructures/queues/Deque.java) | [MainDeque.java](https://github.com/dzimiks/Algorithms/blob/master/src/dataStructures/MainDeque.java) |
+| Queues | [LinkedPriorityQueue.java](https://github.com/dzimiks/Algorithms/blob/master/src/dataStructures/queues/LinkedPriorityQueue.java) | [MainQueue.java](https://github.com/dzimiks/Algorithms/blob/master/src/dataStructures/MainQueue.java#L51-L56) |
+| Queues | [LinkedQueue.java](https://github.com/dzimiks/Algorithms/blob/master/src/dataStructures/queues/LinkedQueue.java) | [MainQueue.java](https://github.com/dzimiks/Algorithms/blob/master/src/dataStructures/MainQueue.java#L30-L37) |
+| Queues | [PriorityQueue.java](https://github.com/dzimiks/Algorithms/blob/master/src/dataStructures/queues/PriorityQueue.java) | [MainQueue.java](https://github.com/dzimiks/Algorithms/blob/master/src/dataStructures/MainQueue.java) |
+| Queues | [Queue.java](https://github.com/dzimiks/Algorithms/blob/master/src/dataStructures/queues/Queue.java) | [MainQueue.java](https://github.com/dzimiks/Algorithms/blob/master/src/dataStructures/MainQueue.java) |
+| Queues | [QueueArray.java](https://github.com/dzimiks/Algorithms/blob/master/src/dataStructures/queues/QueueArray.java) | [MainQueue.java](https://github.com/dzimiks/Algorithms/blob/master/src/dataStructures/MainQueue.java#L17-L23) |
+| Queues | [QueueFromTwoStacks.java](https://github.com/dzimiks/Algorithms/blob/master/src/dataStructures/queues/QueueFromTwoStacks.java) | [MainQueue.java](https://github.com/dzimiks/Algorithms/blob/master/src/dataStructures/MainQueue.java#L43-L49) |
 
 # Tests
 
