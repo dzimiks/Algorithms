@@ -29,7 +29,7 @@ public class Digraph {
 		this.E = G.getE();
 		
 		for (int v = 0; v < V; v++)
-			this.indegree[v] = G.getIndegree(v);
+			this.indegree[v] = G.indegree(v);
 		
 		for (int v = 0; v < G.getV(); v++) {
 			Stack<Integer> reverse = new Stack<Integer>();
@@ -131,10 +131,5 @@ public class Digraph {
 
 	public int getE() {
 		return E;
-	}
-
-	public int getIndegree(int v) {
-		validateVertex(v);
-		return indegree[v];
 	}
 }

@@ -249,7 +249,8 @@ public class BinaryTree<T> {
 		return root;
 	}
 	
-	public void getVerticalOrder(Node<Integer> root, int horizontalDistance, TreeMap<Integer, Vector<Integer>> m) {
+	public void getVerticalOrder(Node<Integer> root, int horizontalDistance, 
+			   					 TreeMap<Integer, Vector<Integer>> m) {
 		
 		if (root == null)
 			return;

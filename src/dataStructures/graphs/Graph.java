@@ -111,15 +111,7 @@ public class Graph {
 		return V;
 	}
 
-	public void setV(int v) {
-		V = v;
-	}
-
 	public int getE() {
 		return E;
-	}
-
-	public void setE(int e) {
-		E = e;
 	}
 }
