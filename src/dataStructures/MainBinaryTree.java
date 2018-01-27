@@ -52,12 +52,10 @@ public class MainBinaryTree {
 //		System.out.println(tree.getRoot());
 		
 		System.out.println("\nHeight of tree is: " + tree.height(tree.getRoot()));
-		
-		System.out.println("\nSize of tree is: " + tree.size(tree.getRoot()));
-		
-		System.out.print("\nIs leaf node: ");
+		System.out.println("Size of tree is: " + tree.size(tree.getRoot()));
+		System.out.print("Is leaf node: ");
 		System.out.println(tree.isLeaf(tree.getRoot().getRight().getLeft()) ? "yes" : "no");
-		
-		System.out.println("\nSum of all nodes is: " + tree.sumOfAllNodes(tree.getRoot()));
+		System.out.println("Sum of all nodes is: " + tree.sumOfAllNodes(tree.getRoot()));
+		System.out.println("Number of nodes between 5 and 6 is: " + tree.numberOfNodesBetweenGivenRange(tree.getRoot(), 5, 6));
 	}
 }

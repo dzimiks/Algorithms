@@ -23,10 +23,8 @@ public class MainBST {
 		tree.postorder(tree.getRoot());
 		
 		System.out.println("\n\nSearch for 2: " + tree.search(tree.getRoot(), 2));
-		
-		System.out.println("\nMin value in BST: " + tree.minValue(tree.getRoot()));
-		
-		System.out.println("\nMax value in BST: " + tree.maxValue(tree.getRoot()));
+		System.out.println("Min value in BST: " + tree.minValue(tree.getRoot()));
+		System.out.println("Max value in BST: " + tree.maxValue(tree.getRoot()));
 		
 		System.out.println("\nDelete 7: ");
 		tree.deleteData(7);

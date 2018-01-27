@@ -2,6 +2,7 @@ package dataStructures.binaryTrees;
 
 import java.util.LinkedList;
 import java.util.Map.Entry;
+
 import java.util.Queue;
 import java.util.Stack;
 import java.util.TreeMap;
@@ -239,6 +240,20 @@ public class BinaryTree<T> {
 			return 0;
 		
 		return root.data + sumOfAllNodes(root.left) + sumOfAllNodes(root.right);
+	}
+	
+	public int numberOfNodesBetweenGivenRange(Node<Integer> root, int low, int high) {
+		
+		if (root == null)
+			return 0;
+		
+		if (root.data >= low && root.data <= high) 
+			return numberOfNodesBetweenGivenRange(root.left, low, high) + 
+				   numberOfNodesBetweenGivenRange(root.right, low, high) + 1;
+		else if (root.data < low)
+			return numberOfNodesBetweenGivenRange(root.right, low, high);
+		else
+			return numberOfNodesBetweenGivenRange(root.left, low, high);
 	}
 	
 	public void setRoot(Node<T> root) {
