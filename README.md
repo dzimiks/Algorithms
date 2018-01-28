@@ -2,8 +2,19 @@
 
 Implementation of various algorithms and data structures written in Java.
 
+* [Algorithms](#algorithms)
 * [Data Structures](#data-structures)
 * [Tests](#tests)
+
+# Algorithms
+
+| Subdomain | Code | Test Class |                                                                                           
+|:---------:|:---------:|:--------:|
+| Digraph traversals | [DepthFirstOrder.java](https://github.com/dzimiks/Algorithms/blob/master/src/algorithms/digraphTraversals/DepthFirstOrder.java) | [MainDigraphTraversals.java](https://github.com/dzimiks/Algorithms/blob/master/src/algorithms/MainDigraphTraversals.java#L84-L113) |
+| Digraph traversals | [DirectedBFS.java](https://github.com/dzimiks/Algorithms/blob/master/src/algorithms/digraphTraversals/DirectedBFS.java) | [MainDigraphTraversals.java](https://github.com/dzimiks/Algorithms/blob/master/src/algorithms/MainDigraphTraversals.java#L53-L58) |
+| Digraph traversals | [DirectedBFSPaths.java](https://github.com/dzimiks/Algorithms/blob/master/src/algorithms/digraphTraversals/DirectedBFSPaths.java) | [MainDigraphTraversals.java](https://github.com/dzimiks/Algorithms/blob/master/src/algorithms/MainDigraphTraversals.java#L60-L82) |
+| Digraph traversals | [DirectedDFS.java](https://github.com/dzimiks/Algorithms/blob/master/src/algorithms/digraphTraversals/DirectedDFS.java) | [MainDigraphTraversals.java](https://github.com/dzimiks/Algorithms/blob/master/src/algorithms/MainDigraphTraversals.java#L21-L26) |
+| Digraph traversals | [DirectedDFSPaths.java](https://github.com/dzimiks/Algorithms/blob/master/src/algorithms/digraphTraversals/DirectedDFSPaths.java) | [MainDigraphTraversals.java](https://github.com/dzimiks/Algorithms/blob/master/src/algorithms/MainDigraphTraversals.java#L30-L51) |
 
 # Data Structures
 
