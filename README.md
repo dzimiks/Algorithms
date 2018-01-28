@@ -28,6 +28,13 @@ Implementation of various algorithms and data structures written in Java.
 | Minimum Spanning Tree | [PrimMST.java](https://github.com/dzimiks/Algorithms/blob/master/src/algorithms/mst/PrimMST.java) | [MainMST.java](https://github.com/dzimiks/Algorithms/blob/master/src/algorithms/MainMST.java#L29-L39) |
 | Minimum Spanning Tree | [TarjanStronglyConnectedComponents.java](https://github.com/dzimiks/Algorithms/blob/master/src/algorithms/mst/TarjanStronglyConnectedComponents.java) | [MainMST.java](https://github.com/dzimiks/Algorithms/blob/master/src/algorithms/MainMST.java#L65-L85) |
 | Minimum Spanning Tree | [UnionFind.java](https://github.com/dzimiks/Algorithms/blob/master/src/algorithms/mst/UnionFind.java) | [Kruskal.java](https://github.com/dzimiks/Algorithms/blob/master/src/algorithms/mst/Kruskal.java#L35-L47) |
+| Shortest Paths | [BellmanFord.java](https://github.com/dzimiks/Algorithms/blob/master/src/algorithms/shortestPaths/BellmanFord.java) | [MainShortestPaths.java](https://github.com/dzimiks/Algorithms/blob/master/src/algorithms/MainShortestPaths.java#L30-L44) |
+| Shortest Paths | [BellmanFordSP.java](https://github.com/dzimiks/Algorithms/blob/master/src/algorithms/shortestPaths/BellmanFordSP.java) | [BellmanFordSP.java](https://github.com/dzimiks/Algorithms/blob/master/src/algorithms/shortestPaths/BellmanFordSP.java) |
+| Shortest Paths | [Dijkstra.java](https://github.com/dzimiks/Algorithms/blob/master/src/algorithms/shortestPaths/Dijkstra.java) | [MainShortestPaths.java](https://github.com/dzimiks/Algorithms/blob/master/src/algorithms/MainShortestPaths.java#L25-L28) |
+| Shortest Paths | [DijkstraAllPairsSP.java](https://github.com/dzimiks/Algorithms/blob/master/src/algorithms/shortestPaths/DijkstraAllPairsSP.java) | [MainShortestPaths.java](https://github.com/dzimiks/Algorithms/blob/master/src/algorithms/MainShortestPaths.java) |
+| Shortest Paths | [DijkstraSP.java](https://github.com/dzimiks/Algorithms/blob/master/src/algorithms/shortestPaths/DijkstraSP.java) | [DijkstraSP.java](https://github.com/dzimiks/Algorithms/blob/master/src/algorithms/shortestPaths/DijkstraSP.java) |
+| Shortest Paths | [FloydWarshall.java](https://github.com/dzimiks/Algorithms/blob/master/src/algorithms/shortestPaths/FloydWarshall.java) | [MainShortestPaths.java](https://github.com/dzimiks/Algorithms/blob/master/src/algorithms/MainShortestPaths.java#L57-L65) |
+| Shortest Paths | [FloydWarshallSP.java](https://github.com/dzimiks/Algorithms/blob/master/src/algorithms/shortestPaths/FloydWarshallSP.java) | [MainShortestPaths.java](https://github.com/dzimiks/Algorithms/blob/master/src/algorithms/MainShortestPaths.java) |
 
 # Data Structures
 
