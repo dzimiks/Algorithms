@@ -21,6 +21,13 @@ Implementation of various algorithms and data structures written in Java.
 | Graph Traversals | [DFS.java](https://github.com/dzimiks/Algorithms/blob/master/src/algorithms/graphTraversals/DFS.java) | [MainGraphTraversals.java](https://github.com/dzimiks/Algorithms/blob/master/src/algorithms/MainGraphTraversals.java#L30-L42) |
 | Graph Traversals | [DFSPaths.java](https://github.com/dzimiks/Algorithms/blob/master/src/algorithms/graphTraversals/DFSPaths.java) | [MainGraphTraversals.java](https://github.com/dzimiks/Algorithms/blob/master/src/algorithms/MainGraphTraversals.java#L44-L66) |
 | Graph Traversals | [TopologicalSort.java](https://github.com/dzimiks/Algorithms/blob/master/src/algorithms/graphTraversals/TopologicalSort.java) | [MainGraphTraversals.java](https://github.com/dzimiks/Algorithms/blob/master/src/algorithms/MainGraphTraversals.java#L22-L28) |
+| Minimum Spanning Tree | [DisjointSet.java](https://github.com/dzimiks/Algorithms/blob/master/src/algorithms/mst/DisjointSet.java) | [KruskalMST.java](https://github.com/dzimiks/Algorithms/blob/master/src/algorithms/mst/KruskalMST.java#L45-L58) |
+| Minimum Spanning Tree | [Kruskal.java](https://github.com/dzimiks/Algorithms/blob/master/src/algorithms/mst/Kruskal.java) | [Kruskal.java](https://github.com/dzimiks/Algorithms/blob/master/src/algorithms/mst/Kruskal.java) |
+| Minimum Spanning Tree | [KruskalMST.java](https://github.com/dzimiks/Algorithms/blob/master/src/algorithms/mst/KruskalMST.java) | [MainMST.java](https://github.com/dzimiks/Algorithms/blob/master/src/algorithms/MainMST.java#L42-L61) |
+| Minimum Spanning Tree | [Prim.java](https://github.com/dzimiks/Algorithms/blob/master/src/algorithms/mst/Prim.java) | [Prim.java](https://github.com/dzimiks/Algorithms/blob/master/src/algorithms/mst/Prim.java) |
+| Minimum Spanning Tree | [PrimMST.java](https://github.com/dzimiks/Algorithms/blob/master/src/algorithms/mst/PrimMST.java) | [MainMST.java](https://github.com/dzimiks/Algorithms/blob/master/src/algorithms/MainMST.java#L29-L39) |
+| Minimum Spanning Tree | [TarjanStronglyConnectedComponents.java](https://github.com/dzimiks/Algorithms/blob/master/src/algorithms/mst/TarjanStronglyConnectedComponents.java) | [MainMST.java](https://github.com/dzimiks/Algorithms/blob/master/src/algorithms/MainMST.java#L65-L85) |
+| Minimum Spanning Tree | [UnionFind.java](https://github.com/dzimiks/Algorithms/blob/master/src/algorithms/mst/UnionFind.java) | [Kruskal.java](https://github.com/dzimiks/Algorithms/blob/master/src/algorithms/mst/Kruskal.java#L35-L47) |
 
 # Data Structures
 
