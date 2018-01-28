@@ -41,6 +41,9 @@ Implementation of various algorithms and data structures written in Java.
 | Queues | [Queue.java](https://github.com/dzimiks/Algorithms/blob/master/src/dataStructures/queues/Queue.java) | [MainQueue.java](https://github.com/dzimiks/Algorithms/blob/master/src/dataStructures/MainQueue.java) |
 | Queues | [QueueArray.java](https://github.com/dzimiks/Algorithms/blob/master/src/dataStructures/queues/QueueArray.java) | [MainQueue.java](https://github.com/dzimiks/Algorithms/blob/master/src/dataStructures/MainQueue.java#L17-L23) |
 | Queues | [QueueFromTwoStacks.java](https://github.com/dzimiks/Algorithms/blob/master/src/dataStructures/queues/QueueFromTwoStacks.java) | [MainQueue.java](https://github.com/dzimiks/Algorithms/blob/master/src/dataStructures/MainQueue.java#L43-L49) |
+| Stacks | [LinkedStack.java](https://github.com/dzimiks/Algorithms/blob/master/src/dataStructures/stacks/LinkedStack.java) | [MainStack.java](https://github.com/dzimiks/Algorithms/blob/master/src/dataStructures/MainStack.java#L23-L28) |
+| Stacks | [Stack.java](https://github.com/dzimiks/Algorithms/blob/master/src/dataStructures/stacks/Stack.java) | [MainStack.java](https://github.com/dzimiks/Algorithms/blob/master/src/dataStructures/MainStack.java) |
+| Stacks | [StackArray.java](https://github.com/dzimiks/Algorithms/blob/master/src/dataStructures/stacks/StackArray.java) | [MainStack.java](https://github.com/dzimiks/Algorithms/blob/master/src/dataStructures/MainStack.java#L13-L21) |
 
 # Tests
 
