@@ -38,6 +38,15 @@ Implementation of various algorithms and data structures written in Java.
 | Shortest Paths | [DijkstraSP.java](https://github.com/dzimiks/Algorithms/blob/master/src/algorithms/shortestPaths/DijkstraSP.java) | [DijkstraSP.java](https://github.com/dzimiks/Algorithms/blob/master/src/algorithms/shortestPaths/DijkstraSP.java) |
 | Shortest Paths | [FloydWarshall.java](https://github.com/dzimiks/Algorithms/blob/master/src/algorithms/shortestPaths/FloydWarshall.java) | [MainShortestPaths.java](https://github.com/dzimiks/Algorithms/blob/master/src/algorithms/MainShortestPaths.java#L57-L65) |
 | Shortest Paths | [FloydWarshallSP.java](https://github.com/dzimiks/Algorithms/blob/master/src/algorithms/shortestPaths/FloydWarshallSP.java) | [MainShortestPaths.java](https://github.com/dzimiks/Algorithms/blob/master/src/algorithms/MainShortestPaths.java) |
+| Sorting | [BubbleSort.java](https://github.com/dzimiks/Algorithms/blob/master/src/algorithms/sorting/BubbleSort.java) | [MainSorting.java](https://github.com/dzimiks/Algorithms/blob/master/src/algorithms/MainSorting.java) |
+| Sorting | [CountingSort.java](https://github.com/dzimiks/Algorithms/blob/master/src/algorithms/sorting/CountingSort.java) | [MainSorting.java](https://github.com/dzimiks/Algorithms/blob/master/src/algorithms/MainSorting.java) |
+| Sorting | [HeapSort.java](https://github.com/dzimiks/Algorithms/blob/master/src/algorithms/sorting/HeapSort.java) | [MainSorting.java](https://github.com/dzimiks/Algorithms/blob/master/src/algorithms/MainSorting.java) |
+| Sorting | [InsertionSort.java](https://github.com/dzimiks/Algorithms/blob/master/src/algorithms/sorting/InsertionSort.java) | [MainSorting.java](https://github.com/dzimiks/Algorithms/blob/master/src/algorithms/MainSorting.java) |
+| Sorting | [MergeSort.java](https://github.com/dzimiks/Algorithms/blob/master/src/algorithms/sorting/MergeSort.java) | [MainSorting.java](https://github.com/dzimiks/Algorithms/blob/master/src/algorithms/MainSorting.java) |
+| Sorting | [QuickSort.java](https://github.com/dzimiks/Algorithms/blob/master/src/algorithms/sorting/QuickSort.java) | [MainSorting.java](https://github.com/dzimiks/Algorithms/blob/master/src/algorithms/MainSorting.java) |
+| Sorting | [RadixSort.java](https://github.com/dzimiks/Algorithms/blob/master/src/algorithms/sorting/RadixSort.java) | [MainSorting.java](https://github.com/dzimiks/Algorithms/blob/master/src/algorithms/MainSorting.java) |
+| Sorting | [SelectionSort.java](https://github.com/dzimiks/Algorithms/blob/master/src/algorithms/sorting/SelectionSort.java) | [MainSorting.java](https://github.com/dzimiks/Algorithms/blob/master/src/algorithms/MainSorting.java) |
+| Sorting | [ShellSort.java](https://github.com/dzimiks/Algorithms/blob/master/src/algorithms/sorting/ShellSort.java) | [MainSorting.java](https://github.com/dzimiks/Algorithms/blob/master/src/algorithms/MainSorting.java) |
 
 # Data Structures
 
