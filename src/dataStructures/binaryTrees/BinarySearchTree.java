@@ -13,6 +13,25 @@ public class BinarySearchTree<T> extends BinaryTree<T> {
 		return search(root.getRight(), data);
 	}
 	
+	public void insert(int key) {
+		root = insertRec(root, key);
+    }
+	     
+	private Node insertRec(Node root, int key) {
+	 
+        if (root == null) {
+            root = new Node(key);
+            return root;
+        }
+ 
+        if (key < (int) root.getData())
+            root.setLeft(insertRec(root.getLeft(), key));
+        else if (key > (int) root.getData())
+            root.setRight(insertRec(root.getRight(), key));
+ 
+        return root;
+    }
+	
 	public void insert(T data, int key) {
 		root = insert(root, new Node<T>(data, key));
 	}

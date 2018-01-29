@@ -256,14 +256,6 @@ public class BinaryTree<T> {
 			return numberOfNodesBetweenGivenRange(root.left, low, high);
 	}
 	
-	public void setRoot(Node<T> root) {
-		this.root = root;
-	}
-
-	public Node<T> getRoot() {
-		return root;
-	}
-	
 	public void getVerticalOrder(Node<Integer> root, int horizontalDistance, 
 			   					 TreeMap<Integer, Vector<Integer>> m) {
 		
@@ -294,6 +286,110 @@ public class BinaryTree<T> {
 			System.out.println(entry.getValue());
 	}
 
+	public int getHalfNodesCount(Node<Integer> root) {
+
+		int cnt = 0;
+		
+		if (root == null)
+			return 0;
+		
+		Queue<Node> q = new LinkedList<>();
+		q.add(root);
+		
+		while (!q.isEmpty()) {
+			Node<Integer> tmp = q.poll();
+			
+			if (tmp.left != null && tmp.right == null ||
+				tmp.left == null && tmp.right != null)
+				cnt++;
+			
+			if (tmp.left != null)
+				q.add(tmp.left);
+			
+			if (tmp.right != null)
+				q.add(tmp.right);
+		}
+		
+		return cnt;
+	}
+	
+	public int getFullNodesCount(Node<Integer> root) {
+
+		int cnt = 0;
+		
+		if (root == null)
+			return 0;
+		
+		Queue<Node> q = new LinkedList<>();
+		q.add(root);
+		
+		while (!q.isEmpty()) {
+			Node<Integer> tmp = q.poll();
+			
+			if (tmp.left != null && tmp.right != null)
+				cnt++;
+			
+			if (tmp.left != null)
+				q.add(tmp.left);
+			
+			if (tmp.right != null)
+				q.add(tmp.right);
+		}
+		
+		return cnt;
+	}
+	
+	public void averageOfLevels(Node<Integer> root) {
+		
+		Queue<Node> q = new LinkedList<>();
+		q.add(root);
+		
+		while (!q.isEmpty()) {
+			int sum = 0;
+			int cnt = 0;
+			Queue<Node> tmp = new LinkedList<>();
+			
+			while (!q.isEmpty()) {
+				Node<Integer> node = q.poll();
+				
+				sum += node.data;
+				cnt++;
+				
+				if (node.left != null)
+					tmp.add(node.left);
+				
+				if (node.right != null)
+					tmp.add(node.right);
+			}
+			
+			q = tmp;
+			System.out.printf("%.2f ", sum * 1.0 / cnt);
+		}
+	}
+	
+	public void printNodesAtKDistanceFromRoot(Node<Integer> root, int k) {
+		
+		if (root == null)
+			return;
+		
+		if (k == 0) {
+			System.out.print("[" + root.data + "]");
+			return;
+		}
+		else {
+			printNodesAtKDistanceFromRoot(root.left, k - 1);
+			printNodesAtKDistanceFromRoot(root.right, k - 1);
+		}
+	}
+	
+	public void setRoot(Node<T> root) {
+		this.root = root;
+	}
+
+	public Node<T> getRoot() {
+		return root;
+	}
+	
 	public static class Node<T> {
 		
 		private T data;
