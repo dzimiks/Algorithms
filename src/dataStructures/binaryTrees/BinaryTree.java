@@ -382,6 +382,35 @@ public class BinaryTree<T> {
 		}
 	}
 	
+	public void printNodesWithoutSibling(Node<Integer> root) {
+		
+		if (root == null)
+			return;
+		
+		if (root.left != null && root.right != null) {
+			printNodesWithoutSibling(root.left);
+			printNodesWithoutSibling(root.right);
+		}
+		else if (root.right != null) {
+			System.out.print("[" + root.right.data + "]");
+			printNodesWithoutSibling(root.right);
+		}
+		else if (root.left != null) {
+			System.out.print("[" + root.left.data + "]");
+			printNodesWithoutSibling(root.left);
+		}
+	}
+	
+	public int distanceFromRoot(Node<Integer> root, int x) {
+		
+		if (root == null)
+			return -1;
+		
+		int dist = -1;
+		
+		return dist;
+	}
+	
 	public void setRoot(Node<T> root) {
 		this.root = root;
 	}
@@ -399,7 +428,7 @@ public class BinaryTree<T> {
 		
 		public Node(T data) {
 			this.data = data;
-			this.key = 0;
+			this.key = (int) data;
 			this.left = null;
 			this.right = null;
 		}

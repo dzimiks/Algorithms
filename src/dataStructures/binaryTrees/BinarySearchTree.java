@@ -24,10 +24,10 @@ public class BinarySearchTree<T> extends BinaryTree<T> {
             return root;
         }
  
-        if (key < (int) root.getData())
-            root.setLeft(insertRec(root.getLeft(), key));
-        else if (key > (int) root.getData())
-            root.setRight(insertRec(root.getRight(), key));
+        if (key < (int) root.getData()) 
+        	root.setLeft(insertRec(root.getLeft(), key));
+        else if (key > (int) root.getData()) 
+        	root.setRight(insertRec(root.getRight(), key));
  
         return root;
     }
