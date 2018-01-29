@@ -39,7 +39,15 @@ public class MainBST {
 		tree.insert(9, 9);
 		tree.insert(4, 4);
 		
+		BinarySearchTree<Integer> subtree = new BinarySearchTree<>();
+		
+		subtree.insert(8, 8);
+		subtree.insert(7, 7);
+		subtree.insert(11, 11);
+		subtree.insert(9, 9);
+		
 		Node<Integer> root = tree.getRoot();
+		Node<Integer> subtreeRoot = subtree.getRoot();
 		
 		System.out.println("Preorder: ");
 		tree.preorder(root);
@@ -59,8 +67,9 @@ public class MainBST {
 		tree.printNodesAtKDistanceFromRoot(root, 2);
 		System.out.print("\nNodes that don't have sibling: ");
 		tree.printNodesWithoutSibling(root);
-		System.out.println();
-		
+		System.out.println("\nDistance from root of 9 is " + tree.distanceFromRoot(root, 9));
+		System.out.println("Are identical trees: " + tree.identicalTrees(root, subtreeRoot));
+		System.out.println("Is B subtree of A: " + tree.isSubtree(root, subtreeRoot));
 		System.out.println("\nBST vertical order:");
 		tree.printVerticalOrder(root);
 		

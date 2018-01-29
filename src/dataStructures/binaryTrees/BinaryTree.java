@@ -225,6 +225,19 @@ public class BinaryTree<T> {
         return false;
     }
 	
+	public boolean isSubtree(Node<T> a, Node<T> b) {
+		if (b == null)
+			return true;
+		
+		if (a == null)
+			return false;
+		
+		if (identicalTrees(a, b))
+			return true;
+		
+		return isSubtree(a.left, b) || isSubtree(a.right, b);
+	}
+	
 	public boolean isLeaf(Node<T> node) {
         if (node == null)
             return false;
@@ -407,6 +420,11 @@ public class BinaryTree<T> {
 			return -1;
 		
 		int dist = -1;
+		
+		if ((root.data == x) || 
+			(dist = distanceFromRoot(root.left, x)) >= 0 || 
+			(dist = distanceFromRoot(root.right, x)) >= 0)
+			return dist + 1;
 		
 		return dist;
 	}
