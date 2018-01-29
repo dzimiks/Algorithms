@@ -70,6 +70,9 @@ public class MainBST {
 		System.out.println("\nDistance from root of 9 is " + tree.distanceFromRoot(root, 9));
 		System.out.println("Are identical trees: " + tree.identicalTrees(root, subtreeRoot));
 		System.out.println("Is B subtree of A: " + tree.isSubtree(root, subtreeRoot));
+		System.out.println("Is full tree: " + tree.isFullTree(root));
+		System.out.println("Is complete tree: " + tree.isCompleteTree(root, 0, tree.size(root)));
+		
 		System.out.println("\nBST vertical order:");
 		tree.printVerticalOrder(root);
 		

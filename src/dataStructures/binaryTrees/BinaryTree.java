@@ -238,6 +238,30 @@ public class BinaryTree<T> {
 		return isSubtree(a.left, b) || isSubtree(a.right, b);
 	}
 	
+	public boolean isFullTree(Node<T> root) {
+		if (root == null)
+			return true;
+		
+		if (root.left == null && root.right == null)
+			return true;
+		
+		if (root.left != null && root.right != null)
+			return isFullTree(root.left) && isFullTree(root.right);
+		
+		return false;
+	}
+	
+	public boolean isCompleteTree(Node<T> root, int index, int numOfNodes) {
+		if (root == null)
+			return true;
+		
+		if (index >= numOfNodes)
+			return false;
+		
+		return isCompleteTree(root.left, 2 * index + 1, numOfNodes) &&
+			   isCompleteTree(root.right, 2 * index + 2, numOfNodes);
+	}
+	
 	public boolean isLeaf(Node<T> node) {
         if (node == null)
             return false;
