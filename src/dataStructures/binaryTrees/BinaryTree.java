@@ -279,6 +279,41 @@ public class BinaryTree<T> {
 		return root.data + sumOfAllNodes(root.left) + sumOfAllNodes(root.right);
 	}
 	
+	public int getLevelOfNode(Node<Integer> root, int data) {
+		return getLevelUtil(root, data, 1);
+	}
+	
+	private int getLevelUtil(Node<Integer> root, int data, int level) {
+		if (root == null)
+			return 0;
+		
+		if (root.data == data)
+			return level;
+		
+		int downLevel = getLevelUtil(root.left, data, level + 1);
+		
+		if (downLevel != 0)
+			return downLevel;
+		
+		downLevel = getLevelUtil(root.right, data, level + 1);
+		return downLevel;
+	}
+	
+	public int depthOfDeepestOddLevelLeafNode(Node<Integer> root) {
+		return depthOfOddLeafUtil(root, 1);
+	}
+	
+	private int depthOfOddLeafUtil(Node<Integer> root, int level) {
+		if (root == null)
+			return 0;
+		
+		if (root.left == null && root.right == null && (level & 1) != 0)
+			return level;
+		
+		return Math.max(depthOfOddLeafUtil(root.left, level + 1),
+				        	  depthOfOddLeafUtil(root.right, level + 1));
+	}
+	
 	public int numberOfNodesBetweenGivenRange(Node<Integer> root, int low, int high) {
 		
 		if (root == null)
@@ -311,6 +346,57 @@ public class BinaryTree<T> {
 		m.put(horizontalDistance, get);
 		getVerticalOrder(root.left, horizontalDistance - 1, m);
 		getVerticalOrder(root.right, horizontalDistance + 1, m);
+	}
+	
+	public int maxWidth(Node<Integer> root) {
+		
+		if (root == null)
+			return 0;
+		
+		int width = 0;
+		Queue<Node> q = new LinkedList<>();
+		q.add(root);
+		
+		while (!q.isEmpty()) {
+			int cnt = q.size();
+			width = Math.max(cnt, width);
+			
+			while (cnt-- > 0) {
+				Node<Integer> tmp = q.poll();
+				
+				if (tmp.left != null)
+					q.add(tmp.left);
+				
+				if (tmp.right != null)
+					q.add(tmp.right);
+			}
+		}
+		
+		return width;
+	}
+	
+	public int longestConsecutiveSequence(Node<Integer> root) {
+		if (root == null)
+			return 0;
+		
+		int res = 0;
+		longestConsecutiveSequenceUtil(root, 0, root.data, res);
+
+		return res;
+	}
+	
+	private void longestConsecutiveSequenceUtil(Node<Integer> root, int currLength, int expected, int res) {
+		if (root == null)
+			return;
+		
+		if (root.data == expected)
+			currLength++;
+		else
+			currLength = 1;
+		
+		res = Math.max(res, currLength);
+		longestConsecutiveSequenceUtil(root.left, currLength, root.data + 1, res);
+		longestConsecutiveSequenceUtil(root.right, currLength, root.data + 1, res);
 	}
 	
 	public void printVerticalOrder(Node<Integer> root) {

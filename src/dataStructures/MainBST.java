@@ -19,16 +19,6 @@ public class MainBST {
 		
 		BinarySearchTree<Integer> tree = new BinarySearchTree<>();
 
-//		tree.insert(6);
-//		tree.insert(8);
-//		tree.insert(2);
-//		tree.insert(5);
-//		tree.insert(1);
-//		tree.insert(7);
-//		tree.insert(11);
-//		tree.insert(9);
-//		tree.insert(4);
-		
 		tree.insert(6, 6);
 		tree.insert(8, 8);
 		tree.insert(2, 2);
@@ -72,6 +62,10 @@ public class MainBST {
 		System.out.println("Is B subtree of A: " + tree.isSubtree(root, subtreeRoot));
 		System.out.println("Is full tree: " + tree.isFullTree(root));
 		System.out.println("Is complete tree: " + tree.isCompleteTree(root, 0, tree.size(root)));
+		System.out.println("Level of node 4 is: " + tree.getLevelOfNode(root, 4));
+		System.out.println("The depth of the deepest odd level node is: " + tree.depthOfDeepestOddLevelLeafNode(root));
+		System.out.println("Max width of tree is: " + tree.maxWidth(root));
+		System.out.println("Longest consecutive sequence in BST is " + tree.longestConsecutiveSequence(root));
 		
 		System.out.println("\nBST vertical order:");
 		tree.printVerticalOrder(root);
