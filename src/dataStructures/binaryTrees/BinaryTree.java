@@ -539,6 +539,30 @@ public class BinaryTree<T> {
 		return dist;
 	}
 	
+	private class Count {
+        int cnt = 0;
+    }
+	
+	public void kthLargestNode(int k) {
+		Count cnt = new Count();
+		kthLargestNodeUtil(root, k, cnt);
+	}
+	
+	private void kthLargestNodeUtil(Node<T> root, int k, Count c) {
+		if (root == null || c.cnt >= k)
+			return;
+		
+		kthLargestNodeUtil(root.right, k, c);
+		c.cnt++;
+		
+		if (c.cnt == k) {
+			System.out.println(k + "th largest node is " + root.data);
+			return;
+		}
+		
+		kthLargestNodeUtil(root.left, k, c);
+	}
+	
 	public void setRoot(Node<T> root) {
 		this.root = root;
 	}

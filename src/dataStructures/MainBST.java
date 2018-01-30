@@ -67,6 +67,10 @@ public class MainBST {
 		System.out.println("Max width of tree is: " + tree.maxWidth(root));
 		System.out.println("Longest consecutive sequence in BST is " + tree.longestConsecutiveSequence(root));
 		
+		for (int i = 1; i <= 9; i++) {
+			tree.kthLargestNode(i);
+		}
+		
 		System.out.println("\nBST vertical order:");
 		tree.printVerticalOrder(root);
 		
